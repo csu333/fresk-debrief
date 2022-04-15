@@ -1,0 +1,410 @@
+
+<!DOCTYPE HTML>
+<html lang="fr" class="">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0 minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="Jean-Pierre Cadiat">
+
+	<meta property="og:title" content="Debriefing atelier La Fresque du Climat">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Flowtime.js">
+
+	<meta name="description" content="Debriefing atelier La Fresque du Climat">
+
+	<title>Debriefing atelier La Fresque du Climat</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="css/flowtime.css">
+	<link rel="stylesheet" href="css/themes/default.css">
+	<link rel="stylesheet" href="css/highcharts.css">
+	<link rel="stylesheet" href="assets/css/prism.css">
+
+
+	<!-- link rel="apple-touch-icon-precomposed" 						href="img/touch-icon-iphone.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="72x72" 		href="img/touch-icon-ipad.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="114x114" 	href="img/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="144x144" 	href="img/touch-icon-ipad-retina.png" -->
+
+	<link rel="apple-touch-startup-image" href="img/startup-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+	<link rel="apple-touch-startup-image" href="img/startup-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+	
+	<script src='js/a41d0908b8.js'></script>
+	
+	<script src="js/charts/highcharts-more.js"></script>
+	<script src="js/charts/modules/exporting.js"></script>
+	<script src="js/charts/modules/export-data.js"></script>
+	<script src="js/charts/modules/data.js"></script>
+	<script src="js/charts/modules/heatmap.js"></script>
+	<script src="js/charts/modules/treemap.js"></script>
+	<script src="js/charts/modules/accessibility.js"></script>
+	<script src="js/charts/modules/annotations-advanced.js"></script>
+	<script src="js/maps/highmaps.js"></script>
+	<script src="js/maps/modules/exporting.js"></script>
+	<script src="js/maps/modules/offline-exporting.js"></script>
+	<script src="js/maps/modules/data.js"></script>
+	
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+<body class="">
+	<div class="flowtime">
+		<div class="ft-section" data-id="section-1">
+			<div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Titre principal">
+				<div class="stack-center">
+					<div class="stacked-center" >
+						<img width="80%" src="img/fr/logo.svg">
+						<p class="page-title">Debriefing</p>
+						<p style="color:#000000;">Ce document n'est pas un document officiel de l'association</p>
+						<p style="color:#000000;"><small><span style="display: inline;">lafresquedu</span><span style="display: inline;">climat<i class='fas fa-at' style='font-size:12px'></i></span>jp.cadiat.be</small></p>
+						
+					</div>
+				</div>
+			</div>
+			<div id="/section-1/page-2" class="ft-page" data-id="page-2">
+				<header>Émotions</header>
+				<div class="side-by-side">
+					<div class="left">
+						<p>Que ressentez-vous ?</p>
+						<p>Quelle carte vous a marqué ?</p>
+						<div align="center">
+							<img width="70%" src="img/fr/plutchik-wheel.svg">
+						</div>
+					</div>
+					<div class="right">
+						<div align="center">
+							<img width="70%" src="img/fr/tree.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ft-section" data-id="section-2">
+			<div id="/section-2/page-1" class="ft-page" data-id="page-1">
+				<header>Où en sommes-nous ?</header>
+				<div class="side-by-side">
+					<div class="left">
+						<figure class="highcharts-figure">
+							<div id="container-annual-ghg"></div>
+							<p lang="en" class="legend">
+								Shown are national production-based emissions in 2020. Production-based emissions measure CO₂ produced domestically from fossil fuel combustion and cement, and do not adjust for emissions embedded in trade (i.e., consumption-based).
+								Values may not sum to 100% due to rounding.
+							</p>
+							<p lang="fr" class="legend">
+								Les valeurs affichées sont les émissions nationales de 2020 dues à la production. Les émissions dues à la production mesurent la production domestique de CO₂ résulatnat de la combustion d'énergies fossiles et de la production de ciment et ne sont pas ajustées pour les émissions dues à l'échange de biens.
+								La somme des valeurs pourrait ne pas faire 100% à cause des arrondis.
+							</p>
+							<span class="source">Source: <a href="https://ourworldindata.org/annual-co2-emissions">ourworldindata.com</a></span>
+						</figure>
+					</div>
+					<div class="right">
+							<figure class="highcharts-figure">
+							<div id="container-total-ghg"></div>
+							<p lang="en" class="legend">
+								Shown are national production-based emissions during the period 1751-2020. Production-based emissions measure CO₂ produced domestically from fossil fuel combustion and cement, and do not adjust for emissions embedded in trade (i.e., consumption-based).
+								Values may not sum to 100% due to rounding.
+							</p>
+							<p lang="fr" class="legend">
+								Émissions de dioxide de carbone (CO2) sur la période 1751-2020. Les valeurs affichées sont les émissions nationales de 2020 dues à la production. Les émissions dues à la production mesurent la production domestique de CO₂ résulatnat de la combustion d'énergies fossiles et de la production de ciment et ne sont pas ajustées pour les émissions dues à l'échange de biens.
+								La somme des valeurs pourrait ne pas faire 100% à cause des arrondis.
+							</p>
+						<span class="source">Source: <a href="https://ourworldindata.org/contributed-most-global-co2">ourworldindata.com</a></span>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<div id="/section-2/page-2" class="ft-page" data-id="page-2">
+				<header>Où en sommes-nous ?</header>
+				<div class="side-by-side">
+					<div class="left" style="flex: 3 3 200px; ">
+						<!--img width="100%" src="img/fr/europe-carbon-footprint.svg" -->
+						<div style="position: relative; height: calc(100% - 3rem);">
+						  <table class="trellis" id="trellis1">
+							  <tr>
+								  <td></td>
+								  <td class="middle"></td>
+								  <td></td>
+							  </tr>
+						  </table>
+						  <table class="trellis" id="trellis2">
+							  <tr>
+								  <td></td>
+								  <td class="middle"></td>
+								  <td></td>
+							  </tr>
+						  </table>
+						  <div class="stacked-center" id="container-europe-co2"></div>
+						</div>
+						<span class="source">Source: <a href="https://ourworldindata.org/explorers/co2?tab=map&region=Europe&facet=none&country=CHN~USA~IND~GBR~OWID_WRL&Gas=CO₂&Accounting=Consumption-based&Fuel=Total&Count=Per+capita">ourworldindata.com</a></span>
+					</div>
+					<div class="right" style="flex: 2 3 200px;">
+						<div align="center">
+							<img  src="img/fr/local-carbon-footprint.svg">
+						</div>
+						<span class="source">Source: <a href="https://www.ecoconso.be/fr/content/combien-de-co2-emettons-nous-en-belgique">ecoconso.be</a>, <br><a href="https://plateforme-wallonne-giec.be/Lettre9.pdf">plateforme-wallonne-giec.be</a></span>
+					</div>
+				</div>
+			</div>
+			<div id="/section-2/page-3" class="ft-page" data-id="page-3">
+				<header>Où en sommes-nous ?</header>
+				<div class="side-by-side">
+					<div  class="left" style="flex: 6 6 100px">
+							<img width="100%" src="img/fr/annual-co2-emissions-by-region.svg">
+						<span class="source">Source: <a href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions">ourworldindata.com</a></span>
+					</div>
+					<div class="right" style="flex: 4 4 100px">
+						<figure class="highcharts-figure">
+							<div id="container-sectors"></div>
+							<span class="source">Source: <a href="https://ourworldindata.org/emissions-by-sector">ourworldindata.com</a></span>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<div id="/section-2/page-4" class="ft-page" data-id="page-4">
+				<header>Où en sommes-nous ?</header>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<figure class="highcharts-figure">
+							<div class="chart" id="container-sustainable"></div>
+							<span class="source">Source: <a href="https://data.footprintnetwork.org/#/sustainableDevelopment?cn=all&type=earth&yr=2018">footprintnetwork.org</a></span>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ft-section" data-id="section-3">
+			<div id="/section-3/page-1" class="ft-page" data-id="page-1">
+				<header>Objectifs</header>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<img  src="img/fr/greenhouse-gas-emission-scenarios-01.png">
+						<span class="source">Source: <a href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions">ourworldindata.org</a></span>
+					</div>
+				</div>
+			</div>
+			<div id="/section-3/page-2" class="ft-page" data-id="page-2">
+				<header>Conséquences</header>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<img src="img/fr/consequences.png">
+						<span class="source">Source: <a href="https://bonpote.com/les-infographies-bon-pote/">bonpote.com</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ft-section" data-id="section-4">
+			<div id="/section-4/page-1" class="ft-page" data-id="page-1">
+				<header>Moyens d'action</header>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<!-- img  width="100%"  src="img/fr/individual-leverage.svg" -->
+						<figure class="highcharts-figure">
+							<div class="chart" id="container-gesture"></div>
+							<span class="source">Source: <a href="https://www.carbone4.com/wp-content/uploads/2019/06/Publication-Carbone-4-Faire-sa-part-pouvoir-responsabilite-climat.pdf">carbone4.com</a></span>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<div id="/section-4/page-2" class="ft-page" data-id="page-2">
+				<header>Alimentation</header>
+				<div class="side-by-side">
+					<div class="left" style="align-self: flex-start">
+						<!-- img src="img/fr/Environmental-impact-of-food-by-life-cycle-stage.png" -->
+						<figure class="highcharts-figure">
+							<div class="chart" id="container-food"></div>
+						<span class="source">Source: <a href="https://ourworldindata.org/environmental-impacts-of-food">ourworldindata.com</a></span>
+						</figure>	
+					</div>
+					<div class="right" style="align-self: flex-start">
+						<!-- img src="img/fr/ghg-emissions-seafood.svg" -->
+						<figure class="highcharts-figure">
+							<div class="chart" id="container-fish"></div>
+						<span class="source">Source: <a href="https://ourworldindata.org/fish-and-overfishing#environmental-footprint-of-fishing">ourworldindata.com</a></span>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<div id="/section-4/page-3" class="ft-page" data-id="page-3">
+				<header>Mobilité</header>
+				<section class="stack-center">
+					<div class="stacked-center">
+						<!-- img width="100%" src="img/fr/mobility.svg" -->
+						<figure class="highcharts-figure">
+							<div class="chart" id="container-vehicule"></div>
+							<span class="source">Source: <a href="https://theshiftproject.org/panorama-offre-vehicules-impact-carbone-technologie/">theshiftproject.org</a> et  <a href="https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021">gov.uk</a></span>
+						</figure>
+					</div>
+				</section>
+			</div>
+			<div id="/section-4/page-4" class="ft-page" data-id="page-4">
+				<header>Biens et services</header>
+				<div class="side-by-side">
+					<div class="left" style="flex:4 4 100px">
+						<img src="img/fr/goods-services.png">
+						<span class="source">Source: <a href="https://bonpote.com/les-infographies-bon-pote/">bonpote.com</a></span>
+					</div>
+					<div class="right" style="flex:5 5 100px">
+						<div class="flex-container" style="flex-direction: column; height: calc(100% - 2rem);" >
+							<div style="flex:1 1 100px">
+								<img style="height: calc(100% - 2rem);" src="img/fr/digital-consumption.svg">
+								<span class="source">Source: <a href="https://theshiftproject.org/article/climat-insoutenable-usage-video/">theshiftproject.org</a></span>
+							</div>
+							<div style="flex:1 1 100px">
+								<img style="height: 100%;" width="450px" src="img/fr/online-video.svg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="/section-4/page-5" class="ft-page" data-id="page-5">
+				<header>Bâtiments</header>
+				<section class="stack-center">
+					<div class="stacked-center">
+						<img  src="img/fr/Europe_heat_loss_map_V3.jpeg">
+						<span class="source">Source: <a href="https://www.tado.com/gb-en/press/uk-homes-losing-heat-up-to-three-times-faster-than-european-neighbours">tado.com</a></span>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="ft-section" data-id="section-5">
+			<div id="/section-5/page-1" class="ft-page" data-id="page-1">
+				<header>Et maintenant ?</header>
+				<div class="side-by-side">
+					<div class="left">
+						<ul>
+							<li><a href="https://awac-accept.herokuapp.com/household#/login">Calculer mon empreinte carbone</a> (Agence Wallonne de l'Air et du Climat)</li>
+							<li><a href="https://nosgestesclimat.fr/actions">Nos gestes climats</a></li>
+							<li>Rejoignez les réseaux sociaux de la Fresque du Climat ! </li>
+							<ol type="a">
+								<li><a href="https://www.facebook.com/La-Fresque-du-Climat-Belgium-110125937440265/">Facebook Fresque Belgium</a> et <a href="https://www.facebook.com/la.fresque.du.climat/">Facebook Fresque France</a></li>
+								<li><a href="https://www.instagram.com/fresqueduclimat/">Instagram</a></li>
+								<li><a href="https://www.linkedin.com/company/la-fresque-du-climat/?originalSubdomain=fr">LinkedIn</a></li>
+								<li><a href="https://twitter.com/FresqueDuClimat/" >Twitter</a></li>
+							</ol>
+							<li><b>Devenez animateur·trice</b> de la fresque ! Les dates des prochaines formations en ligne sont sur <a href="https://fresqueduclimat.org/dates-formations/">https://fresqueduclimat.org/dates-formations/</a>.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="/section-5/page-2" class="ft-page" data-id="page-2">
+				<header>Aller plus loin</header>
+				<div class="side-by-side">
+					<div class="left">
+						<h1>Ressources en français</h1>
+						<ul>
+							<li><a href="https://bonpote.com/">Bon Pote</a></li>
+							<li><a href="https://theshiftproject.org/">The Shift Project</a></li>
+						</ul>
+						<h1>Ressources en anglais</h1>
+						<ul>
+							<li><a href="https://www.carbonbrief.org/">Carbon brief</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<h1>Les fresques amies</h1>
+						<ul>
+							<li><a href="https://www.fresquedesnouveauxrecits.org/">La Fresque des Nouveaux Récits</a></li>
+							<li><a href="https://www.renaissanceecologique.fr/">Renaissance Écologique</a></li>
+							<li><a href="https://greendonut.org/textile/">Fresque du Textile</a></li>
+							<li><a href="https://greendonut.org/dechets/">Fresque des Déchets</a></li>
+							<li><a href="https://sites.google.com/view/fresquedelabiodiversite/home">Fresque de la Biodiversité</a></li>
+							<li><a href="https://fresqueoceane.com/">Fresque Océane</a></li>
+							<li><a href="https://all4trees.org/agir/fresque-foret/">Fresque de la Forêt</a></li>
+							<li><a href="https://www.fresquedunumerique.org/">La Fresque du Numérique</a></li>
+							<li><a href="https://www.2tonnes.org/">2tonnes</a></li>
+						</ul>
+					<div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="/section-5/page-3" class="ft-page" data-id="page-3">
+		<header>GIEC</header>
+		<div class="side-by-side">
+			<div class="left" style="flex:1 1 50px">
+				<img width="80%" src="img/fr/ipcc.jpg">
+				<span class="source">Source: <a href="https://www.carbonbrief.org/briefing-whats-new-and-interesting-in-the-ipcc-synthesis-report">carbonbrief.org</a></span>
+			</div>
+			<div class="right" style="flex:4 4 100px">
+				<h2>Plus d’informations:</header>
+				<ul>
+					<li><a href="https://www.lereveilleur.com/comprendre-le-giec-et-ses-rapports/">Comprendre le GIEC et ses rapports</a> (le Réveilleur)</li>
+					<li><a href="https://api.theshifters.org/emailing_sharedfiles/rapport_WGI_AR6.pdf">La synthèse du 6e rapport du GIEC</a> (les Shifters)</li>
+                    <li>Les résumés pour les décideurs du 6<sup>e</sup> rapport du GIEC (anglais):</li>
+                    <ul>
+                        <li><a href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM_final.pdf">La base de la science physique</a></li>
+                        <li><a href="https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_SummaryForPolicymakers.pdf">Impacts, adaptation et vulnérabilité</a></li>
+                        <li><a href="https://report.ipcc.ch/ar6wg3/pdf/IPCC_AR6_WGIII_SummaryForPolicymakers.pdf">Atténuation du changement climatique</a></li>
+                    </ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<script src="js/brav1toolbox.js"></script>
+	<script src="js/flowtime.compiled.js"></script>
+	<!-- <script src="js/flowtime.min.js"></script> -->
+	<script src="assets/js/prism.js"></script>
+
+	<script type="text/javascript">
+		var cacheTitle = document.title.replace("Flowtime.js | ", "");
+
+		// Configuration API test
+		Flowtime.showProgress(true);
+		// Flowtime.fragmentsOnSide(true);
+		// Flowtime.fragmentsOnBack(true);
+		// Flowtime.fragmentsAlwaysOnOnceRevealed(true);
+		// Flowtime.useHistory(false);
+		// Flowtime.slideInPx(true);
+		// Flowtime.sectionsSlideToTop(true);
+		// Flowtime.backFromPageToTop(true);
+		// Flowtime.gridNavigation(false);
+		// Flowtime.useOverviewVariant(true);
+		Flowtime.parallaxInPx(true);
+		//
+		// event management
+		// Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
+		Flowtime.onNavigation(onNavigation);
+		function onNavigation(e)
+		{
+			// console.log(cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", ""));
+			cacheTitle = document.title.replace("Flowtime.js | ", "");
+			//console.log('section', e.section, 'sectionIndex', e.sectionIndex);
+			//console.log('page', e.page, 'pageIndex', e.pageIndex);
+			//console.log('pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex);
+			//console.log('prevSection', e.prevSection);
+			//console.log('nextSection', e.nextSection);
+			//console.log('prevPage', e.prevPage);
+			//console.log('nextPage', e.nextPage);
+			//console.log('fragment', e.fragment, + 'fragmentIndex', e.fragmentIndex);
+			//console.log("isOverview", e.isOverview);
+			//console.log('progress:', e.progress, 'total:', e.total);
+			//var value = Math.round(e.progress * 100 / e.total);
+			//console.log('Completion: ' + value + '%');
+		}
+		// starts the application with configuration options
+		Flowtime.start();
+		
+		const language = "fr"
+		
+		$("[lang]").each(function () {
+			if ($(this).attr("lang") == language)
+				$(this).show();
+			else if ($(this).attr("lang"))
+				$(this).hide();
+		});
+	</script>
+	<script src="js/sectors.js" async></script>
+	<script src="js/sustainable.js" async></script>
+	<script src="js/europe-co2.js" async></script>
+	<script src="js/gesture.js" async></script>
+	<script src="js/vehicule.js" async></script>
+	<script src="js/food.js" async></script>
+	<script src="js/fish.js" async></script>
+	
+	<script src="js/annual-ghg.js" async></script>
+	<script src="js/total-ghg.js" async></script>
+</body>
+</html>

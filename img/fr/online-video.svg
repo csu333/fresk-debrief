@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="77mm"
+   height="64mm"
+   viewBox="0 0 77 64"
+   version="1.1"
+   id="svg2818"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="Vidéo internet.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2820"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="6.4070146"
+     inkscape:cx="133.52553"
+     inkscape:cy="198.1422"
+     inkscape:window-width="2326"
+     inkscape:window-height="1082"
+     inkscape:window-x="3080"
+     inkscape:window-y="895"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2815" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       style="font-family:sans-serif;font-size:2.8px;"
+       id="text1348"
+       x="10.350533"
+       y="52.899006">Répartition des flux de données en ligne</text>
+    <text
+       style="font-family:sans-serif;font-size:2.8px;"
+       id="text1352"
+       x="4.0489626"
+       y="56.285671">entre les différents usages en 2018 dans le monde</text>
+    <g
+       id="g14086">
+      <text
+         style="font-size:2.2px;font-family:sans-serif"
+         id="text1356"
+         x="6.3654823"
+         y="60.147625">[Source :</text>
+      <text
+         transform="skewX(-9.9997565)"
+         style="font-style:italic;font-size:2.2px;font-family:sans-serif"
+         id="text1360"
+         x="26.812101"
+         y="60.063839">The Shift Project 2019</text>
+      <text
+         style="font-size:2.2px;font-family:sans-serif"
+         id="text1364"
+         x="41.100929"
+         y="60.10788">- à partir de (Sandvine 2018),</text>
+    </g>
+    <text
+       style="font-family:sans-serif;font-size:2.2px;"
+       id="text1368"
+       x="21.374765"
+       y="62.930099">(Cisco 2018) et (SimilarWeb 2019)]</text>
+    <path
+       style="fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:0.1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4940"
+       sodipodi:type="arc"
+       sodipodi:cx="24.019846"
+       sodipodi:cy="24.195974"
+       sodipodi:rx="23.593262"
+       sodipodi:ry="23.7658"
+       sodipodi:start="3.1430816"
+       sodipodi:end="4.3990494"
+       sodipodi:arc-type="slice"
+       d="M 0.4266104,24.160588 A 23.593262,23.7658 0 0 1 16.747522,1.5873427 l 7.272324,22.6086313 z" />
+    <text
+       style="text-anchor:middle;text-align:center;font-family:sans-serif;font-size:2.5px;font-weight:bold;"
+       id="text1384"
+       x="11.673487"
+       y="14.554922"><tspan
+         sodipodi:role="line"
+         id="tspan131298"
+         x="11.673487"
+         y="14.554922"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.46944007px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+           id="tspan44635">Usages</tspan></tspan><tspan
+         sodipodi:role="line"
+         id="tspan131300"
+         x="11.673487"
+         y="17.641722">hors vidéo</tspan><tspan
+         sodipodi:role="line"
+         x="11.673487"
+         y="20.728521"
+         id="tspan131302">20%</tspan></text>
+    <path
+       style="fill:#ff7f00;fill-opacity:1;stroke:#ff7f00;stroke-width:0.102;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3721"
+       sodipodi:type="arc"
+       sodipodi:cx="25.101624"
+       sodipodi:cy="24.516375"
+       sodipodi:rx="23.910999"
+       sodipodi:ry="23.84531"
+       sodipodi:start="4.4030203"
+       sodipodi:end="1.8767654"
+       sodipodi:arc-type="slice"
+       d="m 17.821744,1.8030974 a 23.910999,23.84531 0 0 1 26.630799,8.7063016 23.910999,23.84531 0 0 1 0.04764,27.948266 23.910999,23.84531 0 0 1 -26.600965,8.796536 l 7.202409,-22.737826 z" />
+    <path
+       style="fill:#40bf4c;fill-opacity:1;stroke:#40bf4c;stroke-width:0.1;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5424"
+       sodipodi:type="arc"
+       sodipodi:cx="24.059175"
+       sodipodi:cy="24.979635"
+       sodipodi:rx="23.707903"
+       sodipodi:ry="23.579971"
+       sodipodi:start="1.8787119"
+       sodipodi:end="3.1414211"
+       sodipodi:arc-type="slice"
+       d="M 16.873952,47.450579 A 23.707903,23.579971 0 0 1 0.35127293,24.98368 l 23.70790207,-0.004 z" />
+    <text
+       style="fill:#ffffff;text-anchor:middle;text-align:center;font-family:sans-serif;font-size:2.5px;font-weight:bold;"
+       id="text1396"
+       x="12.206204"
+       y="30.660164"><tspan
+         sodipodi:role="line"
+         id="tspan135919"
+         x="12.206204"
+         y="30.660164"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.46944007px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1"
+           id="tspan60922">Autre</tspan></tspan><tspan
+         sodipodi:role="line"
+         id="tspan135921"
+         x="12.206204"
+         y="33.746967">vidéo</tspan><tspan
+         sodipodi:role="line"
+         x="12.206204"
+         y="36.833767"
+         id="tspan135923">20%</tspan></text>
+    <text
+       style="fill:#ffffff;text-anchor:middle;text-align:center;font-family:sans-serif;font-size:2.5px;font-weight:bold;"
+       id="text1408"
+       x="36.739281"
+       y="22.022795"><tspan
+         sodipodi:role="line"
+         id="tspan1061"
+         x="36.739281"
+         y="22.022795">Vidéo</tspan><tspan
+         sodipodi:role="line"
+         id="tspan1063"
+         x="36.739281"
+         y="25.109594">en ligne</tspan><tspan
+         sodipodi:role="line"
+         x="36.739281"
+         y="28.196394"
+         id="tspan1531">60%</tspan></text>
+    <g
+       id="g14007">
+      <rect
+         style="fill:#886699;fill-opacity:1;stroke:none;stroke-width:0.264999;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:1.59, 1.59;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect9276"
+         width="21.007685"
+         height="14.056326"
+         x="55.192326"
+         y="3.4937105" />
+      <text
+         style="font-weight:bold;font-size:2.1px;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#ffffff"
+         id="text1420"
+         x="65.659256"
+         y="9.9629917"><tspan
+           sodipodi:role="line"
+           id="tspan92776"
+           x="65.659256"
+           y="9.9629917"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle"
+             id="tspan2543">VoD</tspan></tspan><tspan
+           sodipodi:role="line"
+           id="tspan92778"
+           x="65.659256"
+           y="12.59408">34%</tspan></text>
+    </g>
+    <g
+       id="g14014">
+      <rect
+         style="fill:#4a78b5;fill-opacity:1;stroke:none;stroke-width:0.264987;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:1.58993, 1.58993;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect10200"
+         width="21.00769"
+         height="11.224943"
+         x="55.192326"
+         y="17.550037" />
+      <text
+         style="font-weight:bold;font-size:2.1px;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#ffffff"
+         id="text1428"
+         x="65.650177"
+         y="22.636183"><tspan
+           sodipodi:role="line"
+           id="tspan98127"
+           x="65.650177"
+           y="22.636183"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle"
+             id="tspan17057">Pornographie</tspan></tspan><tspan
+           sodipodi:role="line"
+           id="tspan98129"
+           x="65.650177"
+           y="25.267271">27%</tspan></text>
+    </g>
+    <g
+       id="g14021">
+      <rect
+         style="fill:#66b766;fill-opacity:1;stroke:none;stroke-width:0.264841;stroke-linecap:square"
+         id="rect904"
+         width="21.007685"
+         height="9.2100067"
+         x="55.192326"
+         y="28.774981" />
+      <text
+         style="font-weight:bold;font-size:2.1px;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#ffffff"
+         id="text1436"
+         x="65.741127"
+         y="32.853657"><tspan
+           sodipodi:role="line"
+           id="tspan104728"
+           x="65.741127"
+           y="32.853657"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle"
+             id="tspan27277">Tubes</tspan></tspan><tspan
+           sodipodi:role="line"
+           id="tspan104730"
+           x="65.741127"
+           y="35.484745">21%</tspan></text>
+    </g>
+    <g
+       id="g14028">
+      <rect
+         style="fill:#e886d8;fill-opacity:1;stroke:none;stroke-width:0.264891;stroke-linecap:square"
+         id="rect1984"
+         width="21.007687"
+         height="7.5966759"
+         x="55.192326"
+         y="37.984985" />
+      <text
+         style="font-weight:bold;font-size:2.1px;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#ffffff"
+         id="text1444"
+         x="65.741127"
+         y="41.224442"><tspan
+           sodipodi:role="line"
+           id="tspan110409"
+           x="65.741127"
+           y="41.224442"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle"
+             id="tspan35301">Autres</tspan></tspan><tspan
+           sodipodi:role="line"
+           id="tspan110411"
+           x="65.741127"
+           y="43.85553">18%</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff7f00;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1.58999992, 1.58999992;stroke-dashoffset:0"
+       d="M 55.146156,3.4651717 27.6851,0.6909373"
+       id="path9098" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff7f00;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1.58999992, 1.58999992;stroke-dashoffset:0"
+       d="M 55.073375,45.654052 27.658131,48.499627"
+       id="path9100" />
+  </g>
+</svg>

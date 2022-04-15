@@ -321,25 +321,27 @@ body {
   text-align: center;
   white-space: nowrap;
   position: absolute;
-  top:  calc(2rem + 6rem);
+  top:  8rem; /* Allow 6 rem for the slide title */
   right:  2rem;
   bottom: 2rem;
   left:   2rem;
 }
 
-.flowtime .stack-center:before {
+/*.flowtime .stack-center:before {
   content: "";
   height: 100%;
   display: inline-block;
   vertical-align: middle;
-}
+}*/
 
 .flowtime .stack-center .stacked-center {
   white-space: normal;
   width: 100%;
   height: 100%;
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .flowtime .stack-center .stacked-center li {
@@ -364,16 +366,15 @@ body {
   align-items: center;
   align-content: space-around;
   height: calc(100% - 8rem); /* Header is 4 rem and padding is 2 rem */
-  /*max-height: 100%;*/
   max-width: 100%;
   text-align: left;
   white-space: nowrap;
 }
 
 @media only screen and (orientation: portrait) {
-  .flowtime .side-by-side {
-    flex-direction: column;
-  }
+    .flowtime .side-by-side {
+        flex-direction: column;
+    }
 }
 
 /*.flowtime .side-by-side:before {
@@ -384,22 +385,38 @@ body {
 }*/
 
 .flowtime .side-by-side .left {
-  white-space: normal;
-  max-height: 100%;
-  flex: 1 1 100px; 
-  align-self: center;
-  vertical-align: middle;
-  height: 100%;
-  width: 100%;
+    white-space: normal;
+    flex: 1 1 100px; 
+    align-self: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .flowtime .side-by-side .right {
-  white-space: normal;
-  max-height: 100%;
-  flex: 1 1 100px; 
-  vertical-align: middle;
-  height: 100%;
-  width: 100%;
+    white-space: normal;
+    flex: 1 1 100px; 
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (orientation: portrait) {
+    .flowtime .side-by-side .left{
+        padding-bottom: 0.5rem;
+    }
+
+    .flowtime .side-by-side .right{
+        padding-top: 0.5rem;
+    }
 }
 
 /* media queries */

@@ -31,6 +31,7 @@
 	
 	<script src='js/a41d0908b8.js'></script>
 	
+	<script src="js/maps/highmaps.js"></script>
 	<script src="js/charts/highcharts-more.js"></script>
 	<script src="js/charts/modules/exporting.js"></script>
 	<script src="js/charts/modules/export-data.js"></script>
@@ -39,7 +40,6 @@
 	<script src="js/charts/modules/treemap.js"></script>
 	<script src="js/charts/modules/accessibility.js"></script>
 	<script src="js/charts/modules/annotations-advanced.js"></script>
-	<script src="js/maps/highmaps.js"></script>
 	<script src="js/maps/modules/exporting.js"></script>
 	<script src="js/maps/modules/offline-exporting.js"></script>
 	<script src="js/maps/modules/data.js"></script>
@@ -53,7 +53,9 @@
 			<div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Titre principal">
 				<div class="stack-center">
 					<div class="stacked-center" >
-						<img width="80%" src="img/fr/logo.svg">
+                        <div style="display: flex; justify-content: center;">
+                            <img width="80%" src="img/fr/logo.svg">
+                        </div>
 						<p class="page-title">Debriefing</p>
 						<p style="color:#000000;">Ce document n'est pas un document officiel de l'association</p>
 						<p style="color:#000000;"><small><span style="display: inline;">lafresquedu</span><span style="display: inline;">climat<i class='fas fa-at' style='font-size:12px'></i></span>jp.cadiat.be</small></p>
@@ -98,7 +100,7 @@
 						</figure>
 					</div>
 					<div class="right">
-							<figure class="highcharts-figure">
+						<figure class="highcharts-figure">
 							<div id="container-total-ghg"></div>
 							<p lang="en" class="legend">
 								Shown are national production-based emissions during the period 1751-2020. Production-based emissions measure CO₂ produced domestically from fossil fuel combustion and cement, and do not adjust for emissions embedded in trade (i.e., consumption-based).
@@ -118,24 +120,26 @@
 				<div class="side-by-side">
 					<div class="left" style="flex: 3 3 200px; ">
 						<!--img width="100%" src="img/fr/europe-carbon-footprint.svg" -->
-						<div style="position: relative; height: calc(100% - 3rem);">
-						  <table class="trellis" id="trellis1">
-							  <tr>
-								  <td></td>
-								  <td class="middle"></td>
-								  <td></td>
-							  </tr>
-						  </table>
-						  <table class="trellis" id="trellis2">
-							  <tr>
-								  <td></td>
-								  <td class="middle"></td>
-								  <td></td>
-							  </tr>
-						  </table>
-						  <div class="stacked-center" id="container-europe-co2"></div>
-						</div>
-						<span class="source">Source: <a href="https://ourworldindata.org/explorers/co2?tab=map&region=Europe&facet=none&country=CHN~USA~IND~GBR~OWID_WRL&Gas=CO₂&Accounting=Consumption-based&Fuel=Total&Count=Per+capita">ourworldindata.com</a></span>
+						<figure class="highcharts-figure">
+                            <div style="position: relative; height: calc(100% - 2rem);">
+                                <table class="trellis" id="trellis1">
+                                    <tr>
+                                        <td></td>
+                                        <td class="middle"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                                <table class="trellis" id="trellis2">
+                                    <tr>
+                                        <td></td>
+                                        <td class="middle"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                                <div class="stacked-center" id="container-europe-co2"></div>
+                            <span class="source">Source: <a href="https://ourworldindata.org/explorers/co2?tab=map&region=Europe&facet=none&country=CHN~USA~IND~GBR~OWID_WRL&Gas=CO₂&Accounting=Consumption-based&Fuel=Total&Count=Per+capita">ourworldindata.com</a></span>
+                        </div>
+                        </figure>
 					</div>
 					<div class="right" style="flex: 2 3 200px;">
 						<div align="center">
@@ -148,9 +152,9 @@
 			<div id="/section-2/page-3" class="ft-page" data-id="page-3">
 				<header>Où en sommes-nous ?</header>
 				<div class="side-by-side">
-					<div  class="left" style="flex: 6 6 100px">
-							<img width="100%" src="img/fr/annual-co2-emissions-by-region.svg">
-						<span class="source">Source: <a href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions">ourworldindata.com</a></span>
+					<div class="left" style="flex: 6 6 100px">
+                        <img width="100%" src="img/fr/annual-co2-emissions-by-region.svg">
+                        <span class="source">Source: <a href="https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions">ourworldindata.com</a></span>
 					</div>
 					<div class="right" style="flex: 4 4 100px">
 						<figure class="highcharts-figure">
@@ -208,18 +212,18 @@
 			<div id="/section-4/page-2" class="ft-page" data-id="page-2">
 				<header>Alimentation</header>
 				<div class="side-by-side">
-					<div class="left" style="align-self: flex-start">
+					<div class="left">
 						<!-- img src="img/fr/Environmental-impact-of-food-by-life-cycle-stage.png" -->
 						<figure class="highcharts-figure">
 							<div class="chart" id="container-food"></div>
-						<span class="source">Source: <a href="https://ourworldindata.org/environmental-impacts-of-food">ourworldindata.com</a></span>
+						    <span class="source">Source: <a href="https://ourworldindata.org/environmental-impacts-of-food">ourworldindata.com</a></span>
 						</figure>	
 					</div>
-					<div class="right" style="align-self: flex-start">
+					<div class="right">
 						<!-- img src="img/fr/ghg-emissions-seafood.svg" -->
 						<figure class="highcharts-figure">
 							<div class="chart" id="container-fish"></div>
-						<span class="source">Source: <a href="https://ourworldindata.org/fish-and-overfishing#environmental-footprint-of-fishing">ourworldindata.com</a></span>
+						    <span class="source">Source: <a href="https://ourworldindata.org/fish-and-overfishing#environmental-footprint-of-fishing">ourworldindata.com</a></span>
 						</figure>
 					</div>
 				</div>
@@ -250,7 +254,7 @@
 								<span class="source">Source: <a href="https://theshiftproject.org/article/climat-insoutenable-usage-video/">theshiftproject.org</a></span>
 							</div>
 							<div style="flex:1 1 100px">
-								<img style="height: 100%;" width="450px" src="img/fr/online-video.svg">
+								<img style="height: 80%;"  src="img/fr/online-video.svg">
 							</div>
 						</div>
 					</div>
@@ -395,6 +399,14 @@
 			else if ($(this).attr("lang"))
 				$(this).hide();
 		});
+
+        Highcharts.setOptions({
+            plotOptions: {
+                series: {
+                    animation: false
+                }
+            }
+        });
 	</script>
 	<script src="js/sectors.js" async></script>
 	<script src="js/sustainable.js" async></script>

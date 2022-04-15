@@ -75,7 +75,7 @@ Highcharts.chart('container-gesture', {
 			var chart = this;
 			chart.renderer.text('<b>Total baisse:</b><br>&nbsp;&nbsp;2,8 t CO₂eq',  chart.plotLeft + 0.6 * chart.plotWidth - chart.series[1].center[3] *0.4, chart.plotTop + 0.4 * chart.plotHeight)
 			  .css({
-				fontSize: chart.series[1].center[3] /8+ 'px',
+				fontSize: (chart.series[1].center[3] / 8) + 'px',
 				color: '#666666'
 			  })
 			  .attr({zIndex:6}).add();

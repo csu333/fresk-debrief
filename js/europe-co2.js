@@ -60,7 +60,7 @@ if (window.location.href.includes('/climat.html')) {
 			map: topology,
 			spacingTop: 30,
 			spacingBottom: 30,
-			height: '80%',
+			height: '70%',
 			backgroundColor: 'transparent'
 		},
 
@@ -220,6 +220,21 @@ charts.push(Highcharts.chart(containers[2], {
 	backgroundColor: 'transparent',
   },
 
+  responsive: {
+      rules: [{
+          condition: {
+              maxWidth: 550
+          },
+          chartOptions: {
+            xAxis:{
+                labels:{
+                    x: 80
+                }
+            }
+          }
+      }]
+  },
+
   title: {
 	text: null
   },
@@ -372,6 +387,21 @@ charts.push(Highcharts.chart(containers[2], {
 	backgroundColor: 'transparent',
   },
 
+  responsive: {
+      rules: [{
+          condition: {
+              maxWidth: 550
+          },
+          chartOptions: {
+            xAxis:{
+                labels:{
+                    x: -100
+                }
+            }
+          }
+      }]
+  },
+
   title: {
 	text: null
   },
@@ -385,11 +415,8 @@ charts.push(Highcharts.chart(containers[2], {
   },
 
   xAxis: {
-	categories:sourceData.slice(sourceData.length/2 + 1).map(item => item.code),
 	labels: {
 	  enabled: false,
-	  x: 150,
-	  align: 'left'
 	}
   },
 

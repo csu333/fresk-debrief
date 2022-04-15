@@ -248,8 +248,22 @@ if (window.location.href.includes('/climat.html')) {
 
 Highcharts.chart('container-total-ghg', {  
 	chart: {
-		height: '75%' // 16:9 ratio
-	  },
+	    height: '80%' // 16:9 ratio
+    },
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 550
+            },
+            chartOptions: {
+                chart: {
+                    height: '95%'
+                }
+            }
+        }]
+    },
+
 	series: [{
 		name: 'Regions',
 		type: 'treemap',
@@ -280,7 +294,7 @@ Highcharts.chart('container-total-ghg', {
 					  + this.point.percentage + '%';
 				  },
 				style: {
-					fontSize: '24px'
+					fontSize: '1.3rem'
 				}
 			}
 		}, {
@@ -298,7 +312,7 @@ Highcharts.chart('container-total-ghg', {
 				  },
 				//format: '{point.name}\r\n{point.value} tonnes CO2',
 				style: {
-					fontSize: '10px'
+					fontSize: '0.5rem'
 				}
 			}
 		}],

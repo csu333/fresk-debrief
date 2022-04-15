@@ -229,7 +229,7 @@ var points =[
 ];
 
 
-var title = 'Who emits the most CO₂ today?';
+var title = 'Who emits the most CO₂?';
 var subtitle = 'Les émissions globales de dioxyde de carbone (CO₂) en 2020 on été de 34,8 milliard de tonnes';
 var pointFormat = '<b>{point.name}</b><br>' +
 			'Emissions: {point.value} tonnes CO₂<br>' +
@@ -237,7 +237,7 @@ var pointFormat = '<b>{point.name}</b><br>' +
 
 if (window.location.href.includes('/climat.html')) {
 	points.forEach(x => x.name = x.namefr);
-	title = 'Qui émet le plus de CO₂ aujourd\'hui ?';
+	title = 'Qui émet le plus de CO₂ ?';
 	subtitle = 'Les émissions globales de dioxyde de carbone (CO₂) en 2020 on été de 34,8 milliard de tonnes';
 	pointFormat = '<b>{point.name}</b><br>' +
 				'Émissions: {point.value} tonnes CO₂<br>' +
@@ -246,8 +246,22 @@ if (window.location.href.includes('/climat.html')) {
 
 Highcharts.chart('container-annual-ghg', {  
 	chart: {
-		height: '75%' // 16:9 ratio
-	  },
+		height: '80%' // 16:9 ratio
+	},
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 550
+            },
+            chartOptions: {
+                chart: {
+                    height: '95%'
+                }
+            }
+        }]
+    },
+
 	series: [{
 		name: 'Regions',
 		type: 'treemap',
@@ -278,7 +292,7 @@ Highcharts.chart('container-annual-ghg', {
 					  + this.point.percentage + '%';
 				  },
 				style: {
-					fontSize: '24px'
+					fontSize: '1.3rem'
 				}
 			}
 		}, {
@@ -296,7 +310,7 @@ Highcharts.chart('container-annual-ghg', {
 				  },
 				//format: '{point.name}\r\n{point.value} tonnes CO2',
 				style: {
-					fontSize: '10px'
+					fontSize: '0.5rem'
 				}
 			}
 		}],

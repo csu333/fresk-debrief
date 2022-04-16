@@ -249,7 +249,7 @@ Highcharts.chart('container-annual-ghg', {
 		height: '80%' // 16:9 ratio
 	},
 
-    responsive: {
+    /*responsive: {
         rules: [{
             condition: {
                 maxWidth: 550
@@ -260,7 +260,7 @@ Highcharts.chart('container-annual-ghg', {
                 }
             }
         }]
-    },
+    },*/
 
 	series: [{
 		name: 'Regions',

@@ -49,10 +49,10 @@ foodData.sort(function(a, b) { return (b.landUse + b.farm + b.animalFeed + b. pr
 // Create the chart
 Highcharts.chart('container-food', {
   chart: {
-    type: 'bar'
+    type: 'bar',
   },
   title: {
-    text: 'Nourriture: émissions de gas à effet de serre à travers la chaine de production (2018)'
+    text: 'Nourriture: émissions de gas à effet de serre à travers la chaine de production (2018)',
   },
   xAxis: {
     categories: foodData.map(x => x.namefr)
@@ -71,8 +71,16 @@ Highcharts.chart('container-food', {
 				legend: {
 					labelFormatter: function() {
 						return "<b>" + this.name+"</b>";
-					}
-				}
+					},
+                    itemStyle: {
+                        fontSize: '9px'
+                    }
+				},
+                title: {
+                    style: {
+                        fontSize: '12px'
+                    }
+                }
             }
         }]
   },

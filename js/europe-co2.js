@@ -141,6 +141,23 @@ charts.push(Highcharts.chart(containers[0], {
   title: {
 	text: null
   },
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 170
+            },
+            chartOptions: {
+                xAxis:{
+                    labels:{
+                        style: {
+                            fontSize: '8px'
+                        }
+                    }
+                }
+            }
+        }]
+    },
   
   exporting: {
 	enabled: false
@@ -223,12 +240,15 @@ charts.push(Highcharts.chart(containers[2], {
   responsive: {
       rules: [{
           condition: {
-              maxWidth: 550
+              maxWidth: 170
           },
           chartOptions: {
             xAxis:{
                 labels:{
-                    x: 80
+                    x: 50,
+                    style: {
+                        fontSize: '8px'
+                    }
                 }
             }
           }
@@ -387,21 +407,6 @@ charts.push(Highcharts.chart(containers[2], {
 	backgroundColor: 'transparent',
   },
 
-  responsive: {
-      rules: [{
-          condition: {
-              maxWidth: 550
-          },
-          chartOptions: {
-            xAxis:{
-                labels:{
-                    x: -100
-                }
-            }
-          }
-      }]
-  },
-
   title: {
 	text: null
   },
@@ -415,9 +420,10 @@ charts.push(Highcharts.chart(containers[2], {
   },
 
   xAxis: {
+	categories: sourceData.slice(0, sourceData.length/2 + 1).map(item => item.code),
 	labels: {
-	  enabled: false,
-	}
+        enabled: false
+      }
   },
 
   yAxis: {

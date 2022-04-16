@@ -121,7 +121,7 @@
 					<div class="left" style="flex: 3 3 200px; ">
 						<!--img width="100%" src="img/fr/europe-carbon-footprint.svg" -->
 						<figure class="highcharts-figure">
-                            <div style="position: relative; height: calc(100% - 2rem);">
+                            <div style="position: relative; height: 100%; top: -2rem;">
                                 <table class="trellis" id="trellis1">
                                     <tr>
                                         <td></td>
@@ -304,7 +304,7 @@
 							<li><a href="https://www.carbonbrief.org/">Carbon brief</a></li>
 						</ul>
 					</div>
-					<div class="right">
+					<div class="right" style="@media only screen and (orientation: portrait) { flex-grow: 2 }">
 						<h1>Les fresques amies</h1>
 						<ul>
 							<li><a href="https://www.fresquedesnouveauxrecits.org/">La Fresque des Nouveaux Récits</a></li>
@@ -405,7 +405,34 @@
                 series: {
                     animation: false
                 }
-            }
+            },
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 600
+                    },
+                    chartOptions: {
+                        title: {
+                            style: {
+                                fontSize: '12px'
+                            }
+                        },
+                        subtitle: {
+                            style: {
+                                fontSize: '9px',
+                                lineHeight: '8px'
+                            }
+                        },
+                        xAxis: {
+                            labels: {
+                                style: {
+                                    fontSize: '9px'
+                                }
+                            }
+                        }
+                    }
+                }]
+            },
         });
 	</script>
 	<script src="js/sectors.js" async></script>

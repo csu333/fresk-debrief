@@ -259,6 +259,24 @@ Highcharts.chart('container-total-ghg', {
             chartOptions: {
                 chart: {
                     height: '95%'
+                },
+                title: {
+                    style: {
+                        fontSize: '12px'
+                    }
+                },
+                subtitle: {
+                    style: {
+                        fontSize: '9px',
+                        lineHeight: '8px'
+                    }
+                },
+                xAxis: {
+                    labels: {
+                        style: {
+                            fontSize: '9px'
+                        }
+                    }
                 }
             }
         }]

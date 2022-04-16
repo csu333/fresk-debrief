@@ -353,7 +353,9 @@ body {
 }
 
 .flowtime .stacked-center figure {
-	display: inline-block;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* horizontally and vertically side-by-side stackable content */
@@ -386,7 +388,7 @@ body {
 
 .flowtime .side-by-side .left {
     white-space: normal;
-    flex: 1 1 100px; 
+    flex: 1 1 10px; 
     align-self: center;
     vertical-align: middle;
     height: 100%;
@@ -399,7 +401,7 @@ body {
 
 .flowtime .side-by-side .right {
     white-space: normal;
-    flex: 1 1 100px; 
+    flex: 1 1 10px; 
     vertical-align: middle;
     height: 100%;
     width: 100%;
@@ -409,13 +411,23 @@ body {
     justify-content: center;
 }
 
+.flowtime .side-by-side figure {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 @media only screen and (orientation: portrait) {
     .flowtime .side-by-side .left{
         padding-bottom: 0.5rem;
+        /*height: calc(50% - 2rem);*/
+        max-height: 50%;
     }
 
     .flowtime .side-by-side .right{
         padding-top: 0.5rem;
+        /*height: calc(50% - 2rem);*/
+        max-height: 50%;
     }
 }
 

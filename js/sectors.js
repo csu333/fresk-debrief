@@ -258,11 +258,25 @@ const chart = Highcharts.chart('container-sectors', {
 	height: '100%' // 16:9 ratio
   },
   title: {
-	text: 'Emissions par secteur, 2020'
+	text: 'Émissions par secteur, 2020'
   },
-  /*subtitle: {
-	text: 'Source: <a href="https://ourworldindata.org/emissions-by-sector">ourworldindata.org</a>'
-  },*/
+  responsive: {
+    rules: [{
+        condition: {
+            maxWidth: 170
+        },
+        chartOptions: {
+            chart: {
+                height: '50%'
+            },
+            title: {
+                style: {
+                    fontSize: '11px'
+                }
+            },
+        }
+    }]
+  },
   plotOptions: {
 	pie: {
 	  shadow: false,

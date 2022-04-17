@@ -47,6 +47,30 @@ Highcharts.chart('container-fish', {
   subtitle: {
 	  text: 'Basé sur une meta-analyse de 1690 élevages et 1000 enregistrements de pêche uniques. Les impacts sont donnés par kilogramme de poids comestible. Le poulet - la viande avec le moins d\'impact - est indiqué en vert pour comparasion'
   },
+  responsive: {
+    rules: [{
+        condition: {
+            maxWidth: 550
+        },
+        chartOptions: {
+            legend: {
+                itemStyle: {
+                    fontSize: '9px'
+                }
+            },
+            title: {
+                style: {
+                    fontSize: '12px'
+                }
+            },
+            subtitle: {
+                style: {
+                    fontSize: '8px'
+                }
+            }
+        }
+    }]
+  },
   xAxis: {
     categories: fishData.map(x => x.namefr)
   },

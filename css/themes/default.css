@@ -18,6 +18,10 @@ body {
   height: 100vh;
 }
 
+img[width] {
+    height: auto;
+}
+
 .navigation, .credits, .switches {
   display: none;
 }
@@ -304,8 +308,6 @@ body {
 }
 
 .flowtime img {
-  width: 100%;
-  height: auto;
   max-height: 100%;
   object-fit: contain;
 }
@@ -377,9 +379,7 @@ body {
 @media only screen and (orientation: portrait) {
     .flowtime img {
         max-width: 100%;
-        width: auto;
-        height: 100%;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .flowtime .side-by-side {

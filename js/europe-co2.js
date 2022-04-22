@@ -32,27 +32,20 @@ const sourceData = [
 
 var title = 'EU-27 Carbon Footprint';
 var subtitle = 'Carbon Footprint per inhabitant in CO₂ tonnes equivalent (2020)';
-var pointFormat = '<b>{point.name}:<b><br>' +
+var pointFormat = '<b>{point.name}: <b><br>' +
 	'Consumption-based: {point.value} t CO₂eq / inhabitant<br>' +
 	'Production-based: {point.valuep} t CO₂eq / inhabitant' ;
 
-if (window.location.href.includes('/climat.html')) {
+if (language == 'fr') {
 	sourceData.forEach(x => x.name = x.namefr);
 	title = 'Empreinte carbone EU-27';
 	subtitle = 'Empreinte carbone par habitant en tonnes équivalent CO₂ (2020)';
-	pointFormat = '<b>{point.namefr}:</b><br>' +
+	pointFormat = '<b>{point.namefr}: </b><br>' +
 		'Consommation: {point.value} t CO₂eq / inhabitant<br>' +
 		'Production: {point.valuep} t CO₂eq / inhabitant' ;
 }
 
 (async () => {
-
-	/*const topology = await fetch(
-		'https://code.highcharts.com/mapdata/custom/europe.topo.json'
-	).then(response => response.json());*/
-
-	
-
 	
 	// Instantiate the map	
 	Highcharts.mapChart('container-europe-co2', {
@@ -168,7 +161,7 @@ charts.push(Highcharts.chart(containers[0], {
   },
 
   xAxis: {
-	categories: sourceData.slice(0, sourceData.length/2 + 1).map(item => item.namefr),
+	categories: sourceData.slice(0, sourceData.length/2 + 1).map(item => language == 'fr' ? item.namefr : item.name),
 	labels: {
 	  enabled: true
 	}
@@ -268,7 +261,7 @@ charts.push(Highcharts.chart(containers[2], {
   },
 
   xAxis: {
-	categories:sourceData.slice(sourceData.length/2 + 1).map(item => item.namefr),
+	categories:sourceData.slice(sourceData.length/2 + 1).map(item => language == 'fr' ? item.namefr : item.name),
 	labels: {
 	  enabled: true,
 	  x: 170,

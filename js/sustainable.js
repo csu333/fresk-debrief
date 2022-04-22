@@ -1,3 +1,24 @@
+var title = 'Human Development Index and Ecological Footprint (2018)';
+var subtitle = 'Human Development Index and Ecological Footprint by country. Circle radius reflects population size';
+var valueFormat = '{index}. {point.name}, HDI: {point.x}, #earths: {point.y}, population: {point.z}.'
+var pointFormat = '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
+    '<tr><th>HDI:</th><td>{point.x}</td></tr>' +
+    '<tr><th># of Earths:</th><td>{point.y}</td></tr>' +
+    '<tr><th>Population:</th><td>{point.z}</td></tr>';
+var targetHDI = 'UN target: 0.7';
+var targetConsumption = 'Sustainable consumption maximum';
+
+if (language == 'fr') {
+    title = 'Indice de Développement Humain et Empreinte écologique (2018)';
+    subtitle = 'Indice de Developpement Humain et Empreinte écologique par pays. Le rayon du cercle représente la taille de la population';
+    pointFormat = '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
+        '<tr><th>IDH:</th><td>{point.x}</td></tr>' +
+        '<tr><th># de Terres:</th><td>{point.y}</td></tr>' +
+        '<tr><th>Population:</th><td>{point.z}</td></tr>';
+    targetHDI = 'Objectif de l\'ONU: 0,7';
+    targetConsumption = 'Maximum de consommation soutenable'
+}
+
 Highcharts.chart('container-sustainable', {
 
 	chart: {
@@ -11,16 +32,16 @@ Highcharts.chart('container-sustainable', {
 	},
 
 	title: {
-		text: 'Indice de Développement Humain et Empreinte écologique (2018)'
+		text: title
 	},
 
 	subtitle: {
-		text: 'Indice de Developpement Humain et Empreinte écologique par pays. Le rayon du cercle représente la taille de la population'
+		text: subtitle
 	},
 
 	accessibility: {
 		point: {
-			valueDescriptionFormat: '{index}. {point.name}, HDI: {point.x}, #earths: {point.y}, population: {point.z}.'
+			valueDescriptionFormat: valueFormat
 		}
 	},
 
@@ -44,7 +65,7 @@ Highcharts.chart('container-sustainable', {
 				style: {
 					fontStyle: 'italic'
 				},
-				text: 'Objectif de l\'ONU: 0,7'
+				text: targetHDI
 			},
 		min: 0
 		}],
@@ -73,7 +94,7 @@ Highcharts.chart('container-sustainable', {
 				style: {
 					fontStyle: 'italic'
 				},
-				text: 'Maximum de consommation soutenable',
+				text: targetConsumption,
 				x: -10
 			},
 			zIndex: 3
@@ -86,10 +107,7 @@ Highcharts.chart('container-sustainable', {
 	tooltip: {
 		useHTML: true,
 		headerFormat: '<table>',
-		pointFormat: '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
-			'<tr><th>HDI:</th><td>{point.x}</td></tr>' +
-			'<tr><th># of Earths:</th><td>{point.y}</td></tr>' +
-			'<tr><th>Population:</th><td>{point.z}</td></tr>',
+		pointFormat: pointFormat,
 		footerFormat: '</table>',
 		followPointer: true
 	},

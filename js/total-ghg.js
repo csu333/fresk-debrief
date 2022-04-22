@@ -232,15 +232,15 @@ var points =[
 ];
 
 var title = 'Who emited the most CO₂ so far?';
-var subtitle = 'Les émissions globales de dioxyde de carbone (CO₂) jusqu\'en en 2020 on été de 1 696,5 milliard de tonnes';
+var subtitle = 'Global carbon dioxide (CO₂) emissions from 1751 until 2020 were 1 696,5 billion tonnes';
 var pointFormat = '<b>{point.name}</b><br>' +
 			'Emissions: {point.value} tonnes CO₂<br>' +
 			'{point.percentage}% global emissions'
 
-if (window.location.href.includes('/climat.html')) {
+if (language == 'fr') {
 	points.forEach(x => x.name = x.namefr);
 	title = 'Qui a émis le plus de CO₂ jusqu\'à aujourd\'hui';
-	subtitle = 'Les émissions globales de dioxyde de carbone (CO₂) jusqu\'en en 2020 on été de 1 696,5 milliard de tonnes';
+	subtitle = 'Les émissions globales de dioxyde de carbone (CO₂) de 1751 jusqu\'en 2020 on été de 1 696,5 milliard de tonnes';
 	pointFormat = '<b>{point.name}</b><br>' +
 				'Émissions: {point.value} tonnes CO₂<br>' +
 				'{point.percentage}% des émissions globales';
@@ -248,7 +248,7 @@ if (window.location.href.includes('/climat.html')) {
 
 Highcharts.chart('container-total-ghg', {  
 	chart: {
-	    height: '80%' // 16:9 ratio
+	    height: '75%' // 16:9 ratio
     },
 
     responsive: {

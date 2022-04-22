@@ -1,55 +1,58 @@
 var sectors;
 var subSectors;
 var subSubSectors;
+var title;
 
-if (window.location.href.includes('/climat.html')) {
-	sectors = [
+if (language == 'fr') {
+    title = 'Émissions par secteur, 2020';
+    sectors = [
 		'Énergie',
 		'Processus industriels',
 		'Déchets',
 		'Agriculture, forêts & utilisation des terres (AFOLU)'
   ];
-  subSectors = [[
-	  'Énergie de l\'industrie',
-	  'Transport',
-	  'Énergie des bâtiments (élec et chauffage)',
-	  'Énergie de l\'agri & pêche',
-	  'Combustion de carburant non alloué',
-	  'Émissions fugitives d\'énergie'
-	],[
-	  'Ciment',
-	  'Chimie & pétrochimie (industriel)'
-	],[
-	  'Décharges',
-	  'Eaux usées'
-	],
-	[
-	  'Élevage & fumier',
-	  'Culture du riz',
-	  'Sols agricoles',
-	  'Brûlage des champs',
-	  'Espaces forestiers',
-	  'Espace de culture',
-	  'Prairie'
-	]
-  ];
-  subSubSectors = [
-	  'Fer & acier',
-	  'Métaux non-féreux',
-	  'Chimie & pétrochimie (énergie)',
-	  'Nourriture et tabac',
-	  'Papier, pulpe & impression',
-	  'Machinerie',
-	  'Autres industries',
-	  'Route',
-	  'Aviation',
-	  'Bâteaux',
-	  'Rail',
-	  'Pipeline',
-	  'Résidentiel',
-	  'Commercial'
-	];
+    subSectors = [[
+        'Énergie de l\'industrie',
+        'Transport',
+        'Énergie des bâtiments (élec et chauffage)',
+        'Énergie de l\'agri & pêche',
+        'Combustion de carburant non alloué',
+        'Émissions fugitives d\'énergie'
+    ],[
+        'Ciment',
+        'Chimie & pétrochimie (industriel)'
+    ],[
+        'Décharges',
+        'Eaux usées'
+    ],
+    [
+        'Élevage & fumier',
+        'Culture du riz',
+        'Sols agricoles',
+        'Brûlage des champs',
+        'Espaces forestiers',
+        'Espace de culture',
+        'Prairie'
+    ]
+    ];
+    subSubSectors = [
+        'Fer & acier',
+        'Métaux non-féreux',
+        'Chimie & pétrochimie (énergie)',
+        'Nourriture et tabac',
+        'Papier, pulpe & impression',
+        'Machinerie',
+        'Autres industries',
+        'Route',
+        'Aviation',
+        'Bâteaux',
+        'Rail',
+        'Pipeline',
+        'Résidentiel',
+        'Commercial'
+    ];
 } else {
+    title = 'Emissions by sector, 2020';
 	sectors = [
 		'Energy',
 		'Industrial processes',
@@ -258,7 +261,7 @@ const chart = Highcharts.chart('container-sectors', {
 	height: '100%' // 16:9 ratio
   },
   title: {
-	text: 'Émissions par secteur, 2020'
+	text: title
   },
   responsive: {
     rules: [{

@@ -161,6 +161,10 @@ img[width] {
   padding: 0;
 }
 
+.flowtime .source span {
+    display: inline;
+  }
+
 /* lists */
 
 .flowtime ul,

@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="css/themes/default.css">
 	<link rel="stylesheet" href="css/highcharts.css">
 	<link rel="stylesheet" href="assets/css/prism.css">
+	<link rel="stylesheet" href="css/consequences.css">
 
 
 	<!-- link rel="apple-touch-icon-precomposed" 						href="img/touch-icon-iphone.png">
@@ -60,11 +61,10 @@
 							<img width="80%" src="img/fr/logo.svg">
 						</div>
 						<p class="page-title">Debriefing</p>
-						<p style="color:#000000;">Ce document n'est pas un document officiel de l'association</p>
-						<p style="color:#000000;"><small><span style="display: inline;">lafresquedu</span><span
-									style="display: inline;">climat<i class='fas fa-at'
-										style='font-size:12px'></i></span>jp.cadiat.be</small></p>
-
+						<p lang="fr" style="color:#000000;">Ce document n'est pas un document officiel de l'association</p>
+						<p lang="en" style="color:#000000;">This document is not an official document of the association</p>
+						<p style="color:#000000;"><small><span style="display: inline;">lafresquedu</span><span style="display: inline;">climat<i class='fas fa-at' style='font-size:12px'></i></span>jp.cadiat.be</small></p>
+						
 					</div>
 				</div>
 				<footer><a href="https://github.com/csu333/fresk-debrief/archive/refs/heads/master.zip"><span lang="fr">Télécharger</span><span lang="en">Download</span></a></footer>
@@ -77,9 +77,9 @@
 						<p lang="fr">Que ressentez-vous ?</p>
 						<p lang="fr">Quelle carte vous a marqué ?</p>
 						<p lang="en">How do you feel?</p>
-						<p lang="en">Which card had the most impact?</p>
-						<img align="center" style="height: 70%" lang="fr" src="img/fr/plutchik-wheel.svg">
-						<img align="center" style="height: 70%" lang="en" src="img/en/plutchik-wheel.svg">
+						<p lang="en">Which card impressel you the most?</p>
+						<img lang="fr" align="center" style="height: 70%" src="img/fr/plutchik-wheel.svg">
+						<img lang="en" align="center" style="height: 70%" src="img/en/plutchik-wheel.svg">
 					</div>
 					<div class="right">
 						<div align="center">
@@ -215,13 +215,179 @@
 					</div>
 				</div>
 			</div>
-			<div id="/section-3/page-2" class="ft-page" data-id="page-2">
+            <div id="/section-3/page-2" class="ft-page" data-id="page-2">
+				<header>Moyens financiers</header>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<img  src="img/fr/investments.png">
+						<span class="source">Source: <a href="https://report.ipcc.ch/ar6wg3/pdf/IPCC_AR6_WGIII_FinalDraft_FullReport.pdf">
+                            <span lang="fr">Rapport AR6 3e groupe de travail (TS.25)</span>
+                            <span lang="en">IPCC Report AR6 Working Group III (TS.25)</span>
+                        </a></span>
+					</div>
+				</div>
+			</div>
+			<div id="/section-3/page-3" class="ft-page" data-id="page-3">
 				<header>Conséquences</header>
 				<div class="stack-center">
 					<div class="stacked-center">
-						<img src="img/fr/consequences.png">
-						<span class="source">Source: <a
-								href="https://bonpote.com/les-infographies-bon-pote/">bonpote.com</a></span>
+						<!-- img src="img/fr/consequences.png" -->
+                        <table style="width: 80vw">
+                            <tr><th></th><th>1,5°C</th><th>2,0°C</th><th>3,0°C</th><th>4,0°C</th></tr>
+                            <tr><td>Jours avec plus de 35°C (par an, Wallonie)</td><td>3</td><td>4,2</td><td>6,5</td><td>7</td></tr>
+                            <tr><td>Jours avec plus de 40°C (par an, Wallonie)</td><td>0,6</td><td>0,8</td><td>1</td><td>1,3</td></tr>
+                            <tr><td>Jours de sécheresse consécutifs (par an, Wallonie)</td><td>19</td><td>19,8</td><td>21,3</td><td>23,8</td></tr>
+                            <tr><td>Neige au Mont Blanc (Janvier – Avril, mm/jour)</td><td>1,1</td><td>1,1</td><td>0,4</td><td>0,4</td></tr>
+                            <tr><td>Deux à trois fois plus de morts à cause de la chaleur à 3°C comparé à 1,5°C</td></tr>
+                        </table>
+                        <div class="indicator">
+                            <div class="gauge">
+                                <div>
+                                    <table class="grid">
+                                        <tr><th>°C</th></tr>
+                                        <tr><td><p>4</p></td><td></td></tr>
+                                        <tr><td><p>3</p></td><td></td></tr>
+                                        <tr><td><p>2</p></td><td></td></tr>
+                                        <tr><td><p>1</p></td><td></td></tr>
+                                        <tr><td><p>0</p></td><td></td></tr>
+                                    </table>
+                                    <div id="mortality" class="risk"></div>
+                                </div>
+                                <div lang="fr" class="risk-legend">Mortalité et morbitité humaine liée à la chaleur</div>
+                                <div lang="en" class="risk-legend">Human heat stress, montality and morbidity</div>
+                            </div>
+                            <div class="gauge">
+                                <div>
+                                    <table class="grid">
+                                        <tr><th>°C</th></tr>
+                                        <tr><td><p>4</p></td><td></td></tr>
+                                        <tr><td><p>3</p></td><td></td></tr>
+                                        <tr><td><p>2</p></td><td></td></tr>
+                                        <tr><td><p>1</p></td><td></td></tr>
+                                        <tr><td><p>0</p></td><td></td></tr>
+                                    </table>
+                                    <div id="marine" class="risk"></div>
+                                </div>
+                                <div lang="fr" class="risk-legend">Perturbation des écosystèmes marins</div>
+                                <div lang="en" class="risk-legend">Marine ecosystemts disruptions</div>
+                            </div>
+                            <div class="gauge">
+                                <div>
+                                    <table class="grid">
+                                        <tr><th>°C</th></tr>
+                                        <tr><td><p>4</p></td><td></td></tr>
+                                        <tr><td><p>3</p></td><td></td></tr>
+                                        <tr><td><p>2</p></td><td></td></tr>
+                                        <tr><td><p>1</p></td><td></td></tr>
+                                        <tr><td><p>0</p></td><td></td></tr>
+                                    </table>
+                                    <div id="terrestrial" class="risk"></div>
+                                </div>
+                                <div lang="fr" class="risk-legend">Perturbation des écosystèmes terrestres</div>
+                                <div lang="en" class="risk-legend">Terrestrial ecosystemts disruptions</div>
+                            </div>
+                            <div class="gauge">
+                                <div>
+                                    <table class="grid">
+                                        <tr><th>°C</th></tr>
+                                        <tr><td><p>4</p></td><td></td></tr>
+                                        <tr><td><p>3</p></td><td></td></tr>
+                                        <tr><td><p>2</p></td><td></td></tr>
+                                        <tr><td><p>1</p></td><td></td></tr>
+                                        <tr><td><p>0</p></td><td></td></tr>
+                                    </table>
+                                    <div id="crop" class="risk"></div>
+                                </div>
+                                <div lang="fr" class="risk-legend">Pertes de rendement agricole</div>
+                                <div lang="en" class="risk-legend">Losses in crop production</div>
+                            </div>
+                            <div class="gauge">
+                                <div>
+                                    <table class="grid">
+                                        <tr><th>°C</th></tr>
+                                        <tr><td><p>4</p></td><td></td></tr>
+                                        <tr><td><p>3</p></td><td></td></tr>
+                                        <tr><td><p>2</p></td><td></td></tr>
+                                        <tr><td><p>1</p></td><td></td></tr>
+                                        <tr><td><p>0</p></td><td></td></tr>
+                                    </table>
+                                    <div id="water-seu" class="risk"></div>
+                                </div>
+                                <div lang="fr" class="risk-legend">Stress hydrique Europe du Sud (SEU)</div>
+                                <div lang="en" class="risk-legend">Water scarcity in Southern Europe (SEU)</div>
+                            </div>
+                            <div class="gauge">
+                                <div>
+                                    <table class="grid">
+                                        <tr><th>°C</th></tr>
+                                        <tr><td><p>4</p></td><td></td></tr>
+                                        <tr><td><p>3</p></td><td></td></tr>
+                                        <tr><td><p>2</p></td><td></td></tr>
+                                        <tr><td><p>1</p></td><td></td></tr>
+                                        <tr><td><p>0</p></td><td></td></tr>
+                                    </table>
+                                    <div id="water-wce" class="risk"></div>
+                                </div>
+                                <div lang="fr" class="risk-legend">Stress hydrique Europe de l'Ouest et Centrale (WCE)</div>
+                                <div lang="en" class="risk-legend">Water scarcity in Western and Central Europe (WCE)</div>
+                            </div>
+                            <div class="gauge">
+                                <div>
+                                    <table class="grid">
+                                        <tr><th>°C</th></tr>
+                                        <tr><td><p>4</p></td><td></td></tr>
+                                        <tr><td><p>3</p></td><td></td></tr>
+                                        <tr><td><p>2</p></td><td></td></tr>
+                                        <tr><td><p>1</p></td><td></td></tr>
+                                        <tr><td><p>0</p></td><td></td></tr>
+                                    </table>
+                                    <div id="flooding" class="risk"></div>
+                                </div>
+                                <div lang="fr" class="risk-legend">Risque d'inondations</div>
+                                <div lang="en" class="risk-legend">River and fluvial flooding</div>
+                            </div>
+                            <div class="gauge">
+                                <div>
+                                    <table class="grid">
+                                        <tr><th>°C</th></tr>
+                                        <tr><td><p>4</p></td><td></td></tr>
+                                        <tr><td><p>3</p></td><td></td></tr>
+                                        <tr><td><p>2</p></td><td></td></tr>
+                                        <tr><td><p>1</p></td><td></td></tr>
+                                        <tr><td><p>0</p></td><td></td></tr>
+                                    </table>
+                                    <div id="submersion" class="risk"></div>
+                                </div>
+                                <div lang="fr" class="risk-legend">Risque de submersion</div>
+                                <div lang="en" class="risk-legend">Coastal flooding</div>
+                            </div>
+                            <div class="gauge">
+                                <div>
+                                    <table class="grid">
+                                        <tr><th>°C</th></tr>
+                                        <tr><td><p>4</p></td><td></td></tr>
+                                        <tr><td><p>3</p></td><td></td></tr>
+                                        <tr><td><p>2</p></td><td></td></tr>
+                                        <tr><td><p>1</p></td><td></td></tr>
+                                        <tr><td><p>0</p></td><td></td></tr>
+                                    </table>
+                                    <div id="delayed" class="risk"></div>
+                                </div>
+                                <div lang="fr" class="risk-legend">Risque différé pour l'héritage culturel et les infrastructures</div>
+                                <div lang="en" class="risk-legend">Delayed risks for cultural heritage and long-living infrastructure</div>
+                            </div>
+                            <div style="position: relative; margin-left: 5vh; margin-top: 5vh">
+                                <table style="text-align: left">
+                                    <tr><th>Niveau de risque</th></tr>
+                                    <tr><td><div style="width: 20px; height:0.8em; background-color: rgb(135,31,94); display: inline-block"></div>&nbsp;&nbsp;Très élevé</td></tr>
+                                    <tr><td><div style="width: 20px; height:0.8em; background-color: rgb(195,26,33); display: inline-block"></div>&nbsp;&nbsp;Élevé</td></tr>
+                                    <tr><td><div style="width: 20px; height:0.8em; background-color: rgb(252,207,20); display: inline-block"></div>&nbsp;&nbsp;Modéré</td></tr>
+                                    <tr><td><div style="width: 20px; height:0.8em; background-color: rgb(255, 255, 255); display: inline-block; border: 1px solid black"></div>&nbsp;&nbsp;Indétectable</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                        <span class="source">Source: <a href="https://www.ipcc.ch/report/ar6/wg2/downloads/outreach/IPCC_AR6_WGII_FactSheet_Europe.pdf">Rapport du GIEC</a> et <a href="https://interactive-atlas.ipcc.ch/regional-information">Atlas interactif du GIEC</a></span>
+						<!-- span class="source">Source: <a href="https://bonpote.com/les-infographies-bon-pote/">bonpote.com</a></span -->
 					</div>
 				</div>
 			</div>
@@ -314,6 +480,7 @@
 							<li><a href="https://awac-accept.herokuapp.com/household#/login">Calculer mon empreinte
 									carbone</a> (Agence Wallonne de l'Air et du Climat)</li>
 							<li><a href="https://nosgestesclimat.fr/actions">Nos gestes climats</a></li>
+                            <li><a href="https://www.earthhero.org/app/">Earth Hero</a> (application)</li>
 							<li>Rejoignez les réseaux sociaux de la Fresque du Climat ! </li>
 							<ol type="a">
 								<li><a href="https://www.facebook.com/La-Fresque-du-Climat-Belgium-110125937440265/">Facebook
@@ -368,37 +535,29 @@
 					</div>
 				</div>
 			</div>
-			<div id="/section-5/page-3" class="ft-page" data-id="page-3">
-				<header>GIEC</header>
-				<div class="side-by-side">
-					<div class="left" style="flex:1 1 50px">
-						<img width="80%" src="img/fr/ipcc.jpg">
-						<span class="source">Source: <a
-								href="https://www.carbonbrief.org/briefing-whats-new-and-interesting-in-the-ipcc-synthesis-report">carbonbrief.org</a></span>
-					</div>
-					<div class="right" style="flex:4 4 100px">
-						<h2>Plus d’informations:</header>
-							<ul>
-								<li><a href="https://www.lereveilleur.com/comprendre-le-giec-et-ses-rapports/">Comprendre
-										le GIEC et ses rapports</a> (le Réveilleur)</li>
-								<li><a href="https://api.theshifters.org/emailing_sharedfiles/rapport_WGI_AR6.pdf">La
-										synthèse du 6e rapport du GIEC</a> (les Shifters)</li>
-								<li>Les résumés pour les décideurs du 6<sup>e</sup> rapport du GIEC (anglais):</li>
-								<ul>
-									<li><a
-											href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM_final.pdf">La
-											base de la science physique</a></li>
-									<li><a
-											href="https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_SummaryForPolicymakers.pdf">Impacts,
-											adaptation et vulnérabilité</a></li>
-									<li><a
-											href="https://report.ipcc.ch/ar6wg3/pdf/IPCC_AR6_WGIII_SummaryForPolicymakers.pdf">Atténuation
-											du changement climatique</a></li>
-								</ul>
-							</ul>
-					</div>
-				</div>
-			</div>
+            <div id="/section-5/page-3" class="ft-page" data-id="page-3">
+                <header>GIEC</header>
+                <div class="side-by-side">
+                    <div class="left" style="flex:1 1 50px">
+                        <img width="80%" src="img/fr/ipcc.jpg">
+                        <span class="source">Source: <a href="https://www.carbonbrief.org/briefing-whats-new-and-interesting-in-the-ipcc-synthesis-report">carbonbrief.org</a></span>
+                    </div>
+                    <div class="right" style="flex:4 4 100px">
+                        <h2>Plus d’informations:</header>
+                        <ul>
+                            <li><a href="https://www.lereveilleur.com/comprendre-le-giec-et-ses-rapports/">Comprendre le GIEC et ses rapports</a> (le Réveilleur)</li>
+                            <li><a href="https://api.theshifters.org/emailing_sharedfiles/rapport_WGI_AR6.pdf">La synthèse du 6e rapport du GIEC</a> (les Shifters)</li>
+                            <li>Les résumés pour les décideurs du 6<sup>e</sup> rapport du GIEC (anglais):</li>
+                            <ul>
+                                <li><a href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM_final.pdf">La base de la science physique</a></li>
+                                <li><a href="https://www.ipcc.ch/report/ar6/wg2/downloads/report/IPCC_AR6_WGII_SummaryForPolicymakers.pdf">Impacts, adaptation et vulnérabilité</a></li>
+                                <li><a href="https://report.ipcc.ch/ar6wg3/pdf/IPCC_AR6_WGIII_SummaryForPolicymakers.pdf">Atténuation du changement climatique</a></li>
+                            </ul>
+                            <li><a href="https://interactive-atlas.ipcc.ch/">L'atlas interactif du GIEC</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 		</div>
 
 
@@ -445,9 +604,9 @@
 			// starts the application with configuration options
 			Flowtime.start();
 
-			const language = $('html')[0].attributes.lang.value;
+			const language = $('html').attr('lang');
 
-			$("[lang]").each(function () {
+			$('body').find('*').filter('[lang]').each(function () {
 				if ($(this).attr("lang") == language)
 					$(this).show();
 				else if ($(this).attr("lang"))

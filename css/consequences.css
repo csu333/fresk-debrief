@@ -1,0 +1,167 @@
+.grid {
+    width: 7rem;
+    height: 100%;
+    position: relative;
+    top: 0;
+}
+
+.grid th {
+    text-align: start;
+}
+
+.grid tr:first-child {
+    border-bottom: 0px;
+    height: 2rem;
+    vertical-align: bottom;
+}
+
+.grid td {
+    border-bottom: 1px solid #ddd;
+}
+
+.grid td:first-child {
+    border-bottom: 0px;
+    width: 2rem;
+    vertical-align: bottom;
+}
+
+.grid td:first-child p {
+    margin-bottom: -0.5em;
+    font-size: 1rem;
+}
+
+.indicator {
+    display:flex; 
+    flex: 1 1 1vh;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+}
+
+.gauge {
+    position: relative; 
+    display:flex; 
+    flex-direction: column; 
+    flex-wrap: nowrap;
+    flex: 1 1 1vh;
+}
+
+.risk {
+    width: 2em;
+    height: 80%;
+    position: relative;
+    bottom: calc(80% + 4px);
+    left: 4rem;
+    border: 1px solid #ddd;
+    flex-grow: 0;
+    z-index: 10;
+}
+
+.risk-legend {
+    font-size: 0.8em;
+    line-height: 1em;
+    text-align: center;
+    width: 5rem;
+    padding-left: 2rem;
+    margin: 0.5em;
+    flex-grow: 0;
+    align-items: flex-start;
+    flex: 1 0 1em;
+}
+
+#mortality {
+    background-image: linear-gradient(to bottom, 
+        rgba(135,31,94,1), 
+        rgba(135,31,94,1) 20%, 
+        rgba(195,26,33,1) 40%, 
+        rgba(195,26,33,1) 50%, 
+        rgba(252,207,20,1) 65%, 
+        rgba(252,207,20,1) 78%,
+        rgba(255,255,255,1) 86%);
+}
+
+#marine {
+    background-image: linear-gradient(to bottom, 
+        rgba(135,31,94,1), 
+        rgba(135,31,94,1) 32%, 
+        rgba(195,26,33,1) 45%, 
+        rgba(195,26,33,1) 51%, 
+        rgba(252,207,20,1) 56%, 
+        rgba(252,207,20,1) 65%,
+        rgba(255,255,255,1) 80%);
+}
+
+#terrestrial {
+    background-image: linear-gradient(to bottom, 
+        rgba(135,31,94,1), 
+        rgba(135,31,94,1) 15%, 
+        rgba(195,26,33,1) 30%, 
+        rgba(195,26,33,1) 45%, 
+        rgba(252,207,20,1) 55%, 
+        rgba(252,207,20,1) 65%,
+        rgba(255,255,255,1) 80%);
+}
+
+#crop {
+    background-image: linear-gradient(to bottom, 
+        rgba(135,31,94,1), 
+        rgba(135,31,94,1) 12%, 
+        rgba(195,26,33,1) 16%, 
+        rgba(195,26,33,1) 32%, 
+        rgba(252,207,20,1) 45%, 
+        rgba(252,207,20,1) 75%,
+        rgba(255,255,255,1) 85%);
+}
+
+#water-seu {
+    background-image: linear-gradient(to bottom, 
+        rgba(135,31,94,1), 
+        rgba(135,31,94,1) 21%, 
+        rgba(195,26,33,1) 45%, 
+        rgba(195,26,33,1) 62%, 
+        rgba(252,207,20,1) 72%, 
+        rgba(252,207,20,1) 75%,
+        rgba(255,255,255,1) 85%);
+}
+
+#water-wce {
+    background-image: linear-gradient(to bottom, 
+        rgba(135,31,94,1), 
+        rgba(195,26,33,1) 15%, 
+        rgba(195,26,33,1) 30%, 
+        rgba(252,207,20,1) 55%, 
+        rgba(252,207,20,1) 65%,
+        rgba(255,255,255,1) 88%);
+}
+
+#flooding {
+    background-image: linear-gradient(to bottom, 
+        rgba(135,31,94,1), 
+        rgba(135,31,94,1) 33%, 
+        rgba(195,26,33,1) 43%, 
+        rgba(195,26,33,1) 45%, 
+        rgba(252,207,20,1) 67%, 
+        rgba(252,207,20,1) 71%,
+        rgba(255,255,255,1) 90%);
+}
+
+#submersion {
+    background-image: linear-gradient(to bottom, 
+        rgba(135,31,94,1), 
+        rgba(135,31,94,1) 38%, 
+        rgba(195,26,33,1) 51%, 
+        rgba(195,26,33,1) 53%, 
+        rgba(252,207,20,1) 67%, 
+        rgba(252,207,20,1) 71%,
+        rgba(255,255,255,1) 82%);
+}
+
+#delayed {
+    background-image: linear-gradient(to bottom, 
+        rgba(135,31,94,1), 
+        rgba(135,31,94,1) 58%, 
+        rgba(195,26,33,1) 67%, 
+        rgba(195,26,33,1) 67%, 
+        rgba(252,207,20,1) 73%, 
+        rgba(252,207,20,1) 75%,
+        rgba(255,255,255,1) 90%);
+}

@@ -64,7 +64,8 @@ for (const sector in dataAction) {
 	for (const action in dataAction[sector].data) {
 		colData.push({
 			color: Highcharts.getOptions().colors[sector],
-			... dataAction[sector].data[action]
+			name: language == 'fr' ? dataAction[sector].data[action].namefr : dataAction[sector].data[action].name,
+			y : dataAction[sector].data[action].y
 		});
 		if (pieData[sector]){
 			pieData[sector].y += dataAction[sector].data[action].y
@@ -80,12 +81,12 @@ for (const sector in dataAction) {
 }
 pieData.forEach(item => item.y = item.y * 100 / total)
 
-var title = 'CO₂ emission reduction achieved through personal actions';
+var title = 'CO₂ emission reduction achieved through personal actions (France)';
 var yAxisLabel = 'Decrease  (t CO₂eq / pers / year)';
 var totalLabel = 'Total decr.';
 
 if (language == 'fr') {
-	title = 'Réduction de CO₂ induites par les gestes individuels';
+	title = 'Réduction de CO₂ induites par les gestes individuels (France)';
 	yAxisLabel = 'Baisse (t CO₂eq / pers / an)';
 	totalLabel = 'Total baisse';
 }

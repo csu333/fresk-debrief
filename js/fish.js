@@ -36,16 +36,32 @@ fishData.forEach( (fish) => {
 	fish.y = fish.value
 })
 
+var title = 'Greenhouse gas emissions per kilogram of seafood (2021)';
+var subtitle = 'Based on a meta-analysis of data from 1690 fish farms and 1000 unique fishery records. Impacts are given per kilogram of edible weight. Farmed fish are shown in black; wild-caught in blue. Chicken – the lowest-impact meat – is shown for comparison.'
+var seriesLabel = [   
+    'Wild fish',
+    'Farmed fish'
+]
+
+if (language == 'fr') {
+  title = 'Gaz à effet de serre par kilo de fruit de mer (2021)';
+  subtitle = 'Basé sur une meta-analyse de 1690 élevages et 1000 enregistrements de pêche uniques. Les impacts sont donnés par kilogramme de poids comestible. Le poulet - la viande avec le moins d\'impact - est indiqué en vert pour comparasion';
+  seriesLabel = [
+    'Poisson sauvage',
+    'Poisson d\'élevage'
+  ]
+}
+
 // Create the chart
 Highcharts.chart('container-fish', {
   chart: {
     type: 'bar'
   },
   title: {
-    text: 'Gaz à effet de serre par kilo de fruit de mer (2021)'
+    text: title
   },
   subtitle: {
-	  text: 'Basé sur une meta-analyse de 1690 élevages et 1000 enregistrements de pêche uniques. Les impacts sont donnés par kilogramme de poids comestible. Le poulet - la viande avec le moins d\'impact - est indiqué en vert pour comparasion'
+	  text: subtitle
   },
   responsive: {
     rules: [{
@@ -72,11 +88,11 @@ Highcharts.chart('container-fish', {
     }]
   },
   xAxis: {
-    categories: fishData.map(x => x.namefr)
+    categories: fishData.map(x => language =='fr' ? x.namefr : x.name)
   },
   yAxis: {
     title: {
-      text: 'Émissions de gas à effet de serre(kg CO₂eq par kilo de produit)'
+      text: 'Émissions de gas à effet de serre (kg CO₂eq par kilo de produit)'
     }
   },
  legend: {
@@ -101,9 +117,9 @@ Highcharts.chart('container-fish', {
     },
   },
   series: [{
-	name: 'Poisson sauvage',
-	data: fishData
+    name: seriesLabel[0],
+    data: fishData
   }, {
-	name: 'Poisson d\'élevage'
+	  name: seriesLabel[1]
   }]
 });

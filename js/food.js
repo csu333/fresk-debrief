@@ -46,20 +46,65 @@ const foodData = [
 
 foodData.sort(function(a, b) { return (b.landUse + b.farm + b.animalFeed + b. processing + b.transport + b.retail + b.packaging) - (a.landUse + a.farm + a.animalFeed + a. processing + a.transport + a.retail + a.packaging) })
 
+var title = 'Food: Greenhouse gas emissions across the supply chain';
+var yAxisLabel = 'Greenhouse gas emissions (kg CO₂eq per kilogram of food product)';
+var seriesName = [
+	'Packaging',
+	'Retail',
+	'Transport',
+	'Processing',
+	'Animal Feed',
+	'Farm',
+	'Land Use Change'
+];
+var seriesDesc = [
+	'Emissions from the production of packaging materials, material transport and end-of-life disposal',
+	'Emissions from energy use in refrigeration and other retail processes',
+	'Emissions from energy use in the transport of food items in country and internationally',
+	'Emissions from energy use in the process of converting raw agricultural products into final food items',
+	'On-farm emissions from crop production and its processing into feed for livestock',
+	'Methane emissions from cows, methane from rice, emissions from fertilizers, manure and farm machinery',
+	'Aboveground changes in biomass from deforestation, and belowground changes in soil carbon'
+]
+
+if (language == 'fr') {
+	title = 'Nourriture: émissions de gas à effet de serre à travers la chaine de production (2018)';
+	yAxisLabel = 'Émissions de gas à effet de serre (kg CO₂eq par kilo de produit)';
+	seriesName = [
+		'Emballage',
+		'Vente',
+		'Transport',
+		'Traitement',
+		'Nourriture',
+		'Ferme',
+		'Utilisation des sols'
+	];
+	seriesDesc = [
+		'Émissions pour la production de matériel d\'emballage, pour son transport et pour son traitement en fin de vie',
+		'Émissions dues à l\'utilisation d\'énergie pour la réfrigération et les autres processus de vente',
+		'Émissions dues à l\'utilisation d\'énergie pour le transport de la nourriture au sein du pays et vers l\'étranger',
+		'Émission dues à l\'utilitation d\'énergie nécessaire à la transformation de la matière première en produit fini',
+		'Émissions dues à la production et au traitement de la nourriture animale',
+		'Émissions de méthane par les vaches et le riz et émissions des engrais, fumier et machines agricoles',
+		'Changements de biomasse dus à la déforestation et changements de la capture du carbone par le sol'
+	]
+}
+
+
 // Create the chart
 Highcharts.chart('container-food', {
   chart: {
     type: 'bar',
   },
   title: {
-    text: 'Nourriture: émissions de gas à effet de serre à travers la chaine de production (2018)',
+    text: title,
   },
   xAxis: {
-    categories: foodData.map(x => x.namefr)
+    categories: foodData.map(x => language == 'fr' ? x.namefr : x.name)
   },
   yAxis: {
     title: {
-      text: 'Émissions de gas à effet de serre(kg CO₂eq par kilo de produit)'
+      text: yAxisLabel
     }
   },
   responsive: {
@@ -105,8 +150,8 @@ Highcharts.chart('container-food', {
     },
   },
   series: [{
-		name: 'Emballage',
-		desc: 'Émissions pour la production de matériel d\'emballage, pour son transport et pour son traitement en fin de vie',
+		name: seriesName[0],
+		desc: seriesDesc[0],
 		data: foodData.map(x => x.packaging),
 		dataLabels: {
 			enabled: true,
@@ -117,28 +162,28 @@ Highcharts.chart('container-food', {
 			inside: false
 		},
 	}, {
-		name: 'Vente',
-		desc: 'Émissions dues à l\'utilisation d\'énergie pour la réfrigération et les autres processus de vente',
+		name: seriesName[1],
+		desc: seriesDesc[1],
 		data: foodData.map(x => x.retail)
 	 }, {
-		name: 'Transport',
-		desc: 'Émissions dues à l\'utilisation d\'énergie pour le transport de la nourriture au sein du pays et vers l\'étranger',
+		name: seriesName[2],
+		desc: seriesDesc[2],
 		data: foodData.map(x => x.transport)
 	 }, {
-		name: 'Traitement',
-		desc: 'Émission dues à l\'utilitation d\'énergie nécessaire à la transformation de la matière première en produit fini',
+		name: seriesName[3],
+		desc: seriesDesc[3],
 		data: foodData.map(x => x.processing)
 	 }, {
-		name: 'Nourriture',
-		desc: 'Émissions dues à la production et au traitement de la nourriture animale',
+		name: seriesName[4],
+		desc: seriesDesc[4],
 		data: foodData.map(x => x.animalFeed)
 	 }, {
-		name: 'Ferme',
-		desc: 'Émissions de méthane par les vaches et le riz et émissions des engrais, fumier et machines agricoles',
+		name: seriesName[5],
+		desc: seriesDesc[5],
 		data: foodData.map(x => x.farm)
 	 }, {
-		name: 'Utilisation des sols',
-		desc: 'Changements de biomasse dus à la déforestation et changements de la capture du carbone par le sol',
+		name: seriesName[6],
+		desc: seriesDesc[6],
 		data: foodData.map(x => x.landUse)
 		}, ]
 });

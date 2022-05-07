@@ -3,7 +3,7 @@ var subtitle = 'Human Development Index and Ecological Footprint by country. Cir
 var valueFormat = '{index}. {point.name}, HDI: {point.x}, #earths: {point.y}, population: {point.z}.'
 var pointFormat = '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
     '<tr><th>HDI:</th><td>{point.x}</td></tr>' +
-    '<tr><th># of Earths:</th><td>{point.y}</td></tr>' +
+    '<tr><th># of Earths:</th><td>{point.y:.2f}</td></tr>' +
     '<tr><th>Population:</th><td>{point.z}</td></tr>';
 var targetHDI = 'UN target: 0.7';
 var targetConsumption = 'Sustainable consumption maximum';
@@ -13,7 +13,7 @@ if (language == 'fr') {
     subtitle = 'Indice de Developpement Humain et Empreinte écologique par pays. Le rayon du cercle représente la taille de la population';
     pointFormat = '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
         '<tr><th>IDH:</th><td>{point.x}</td></tr>' +
-        '<tr><th># de Terres:</th><td>{point.y}</td></tr>' +
+        '<tr><th># de Terres:</th><td>{point.y:.2f}</td></tr>' +
         '<tr><th>Population:</th><td>{point.z}</td></tr>';
     targetHDI = 'Objectif de l\'ONU: 0,7';
     targetConsumption = 'Maximum de consommation soutenable'

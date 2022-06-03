@@ -78,7 +78,7 @@
 						<p lang="fr">Que ressentez-vous ?</p>
 						<p lang="fr">Quelle carte vous a marqué ?</p>
 						<p lang="en">How do you feel?</p>
-						<p lang="en">Which card impressel you the most?</p>
+						<p lang="en">Which card impressed you the most?</p>
 					</div>
 					<div class="right" style="flex-grow: 2;">
 						<div align="center" style="height: 100%">
@@ -473,9 +473,25 @@
 				<header lang="en">Goods and Services</header>
 				<div class="side-by-side">
 					<div class="left" style="flex:4 4 100px">
-						<img src="img/fr/goods-services.png">
-						<span class="source">Source: <a
-								href="https://bonpote.com/les-infographies-bon-pote/">bonpote.com</a></span>
+						<div style="display: flex; flex-direction: column">
+							<!-- <img src="img/fr/goods-services.png">
+							<span class="source">Source: <a
+									href="https://bonpote.com/les-infographies-bon-pote/">bonpote.com</a></span> -->
+							<div style="flex: 1 1 10px">
+								<figure class="highcharts-figure">
+									<div class="chart" id="container-clothing" style="height: 20vh;"></div>
+									<span class="source">Source: <a
+											href="https://doi.org/10.1016/j.spc.2021.05.013">Sohn, J., Nielsen, K. S., Birkved, M., Joanes, T., & Gwozdz, W. (2021). The environmental impacts of clothing: Evidence from United States and three European countries.</a></span>
+								</figure>
+							</div>
+							<div style="flex: 3 3 10px">
+								<figure class="highcharts-figure">
+									<div class="chart" id="container-it" style="height: 45vh"></div>
+									<span class="source">Source: <a
+											href="https://doi.org/10.1016/j.jclepro.2017.12.239">Belkhir, L., & Elmeligi, A. (2018). Assessing ICT global emissions footprint: Trends to 2040 & recommendations. Journal of Cleaner</a></span>
+								</figure>
+							</div>
+						</div>
 					</div>
 					<div class="right" style="flex:5 5 100px">
 						<div class="flex-container" style="flex-direction: column; height:100%">
@@ -689,6 +705,8 @@
 		<script src="js/vehicule.js" async></script>
 		<script src="js/food.js" async></script>
 		<script src="js/fish.js" async></script>
+		<script src="js/clothing.js" async></script>
+		<script src="js/it.js" async></script>
 
 		<script src="js/annual-ghg.js" async></script>
 		<script src="js/total-ghg.js" async></script>

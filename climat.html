@@ -618,6 +618,17 @@
 		<script src="assets/js/prism.js"></script>
 
 		<script type="text/javascript">
+			//Source: https://html-online.com/articles/get-url-parameters-javascript/
+			function getUrlVars() {
+				var vars = {};
+				var parts = window.location.href.replace(/[?&]+([^=&#]+)=([^&#]*)/gi, function(m,key,value) {
+					vars[key] = value;
+				});
+				return vars;
+			}
+		</script>
+
+		<script type="text/javascript">
 			var cacheTitle = document.title.replace("Flowtime.js | ", "");
 
 			// Configuration API test
@@ -655,7 +666,11 @@
 			// starts the application with configuration options
 			Flowtime.start();
 
-			const language = $('html').attr('lang');
+
+			var language = getUrlVars()["lang"];
+			if (language == undefined) {
+				language = $('html').attr('lang');
+			}
 
 			$('body').find('*').filter('[lang]').each(function () {
 				if ($(this).attr("lang") == language)

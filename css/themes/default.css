@@ -454,13 +454,13 @@ img[width] {
 @media only screen and (orientation: portrait) {
     .flowtime .side-by-side .left{
         padding-bottom: 0.5rem;
-        /*height: calc(50% - 2rem);*/
+        height: calc(50% - 2rem);
         max-height: 50%;
     }
 
     .flowtime .side-by-side .right{
         padding-top: 0.5rem;
-        /*height: calc(50% - 2rem);*/
+        height: calc(50% - 2rem);
         max-height: 50%;
     }
 }

@@ -28,6 +28,7 @@ if (language == 'fr') {
 Highcharts.chart('container-clothing', {
   chart: {
     type: 'bar',
+	height: '250px'
   },
   title: {
     text: title,
@@ -46,6 +47,9 @@ Highcharts.chart('container-clothing', {
                 maxWidth: 550
             },
             chartOptions: {
+				chart: {
+					height: '140px'
+				},
 				legend: {
 					labelFormatter: function() {
 						return "<b>" + this.name + "</b>";
@@ -56,7 +60,7 @@ Highcharts.chart('container-clothing', {
 				},
                 title: {
                     style: {
-                        fontSize: '12px'
+                        fontSize: '10px'
                     }
                 }
             }

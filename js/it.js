@@ -49,6 +49,9 @@ Highcharts.chart('container-it', {
                 maxWidth: 550
             },
             chartOptions: {
+				chart: {
+					height: '250px'
+				},
 				legend: {
 					labelFormatter: function() {
 						return "<b>" + this.name + "</b>";
@@ -59,7 +62,7 @@ Highcharts.chart('container-it', {
 				},
                 title: {
                     style: {
-                        fontSize: '12px'
+                        fontSize: '10px'
                     }
                 }
             }

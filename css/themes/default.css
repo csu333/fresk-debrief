@@ -6,7 +6,8 @@ html {
   font-size: 100%;
   line-height: 1.5rem;
   background-color: #ffffff;
-  color: #e90000;
+  /*color: #e90000;*/
+  color:#706f71;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
   width: 100vw;
   height: 100vh;

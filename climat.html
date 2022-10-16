@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="css/flowtime.css">
 	<link rel="stylesheet" href="css/themes/default.css">
+	<link rel="stylesheet" href="css/highcharts-default.css">
 	<link rel="stylesheet" href="css/highcharts.css">
 	<link rel="stylesheet" href="assets/css/prism.css">
 	<link rel="stylesheet" href="css/consequences.css">
@@ -136,7 +137,7 @@
 							<p lang="fr" class="legend">
 								Émissions de dioxide de carbone (CO2) sur la période 1751-2020. Les valeurs affichées
 								sont les émissions nationales de 2020 dues à la production. Les émissions dues à la
-								production mesurent la production domestique de CO₂ résulatnat de la combustion
+								production mesurent la production domestique de CO₂ résulant de la combustion
 								d'énergies fossiles et de la production de ciment et ne sont pas ajustées pour les
 								émissions dues à l'échange de biens.
 								La somme des valeurs pourrait ne pas faire 100% à cause des arrondis.
@@ -189,6 +190,19 @@
 			<div id="/section-2/page-3" class="ft-page" data-id="page-3">
 				<header lang="fr">Où en sommes-nous ?</header>
 				<header lang="en">Where do we stand?</header>
+				<div class="stack-center">
+					<div class="stacked-center">
+						<figure class="highcharts-figure">
+							<div class="chart" id="container-income"></div>
+							<span class="source">Source: <a
+									href="https://www.cambridge.org/core/journals/global-sustainability/article/unequal-distribution-of-household-carbon-footprints-in-europe-and-its-link-to-sustainability/F1ED4F705AF1C6C1FCAD477398353DC2">Ivanova, D., & Wood, R. (2020)</a></span>
+						</figure>
+					</div>
+				</div>
+			</div>
+			<div id="/section-2/page-4" class="ft-page" data-id="page-4">
+				<header lang="fr">Où en sommes-nous ?</header>
+				<header lang="en">Where do we stand?</header>
 				<div class="side-by-side">
 					<div class="left" style="flex: 6 6 100px">
                         <img lang="fr" width="100%" src="img/fr/annual-co2-emissions-by-region.svg">
@@ -204,7 +218,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="/section-2/page-4" class="ft-page" data-id="page-4">
+			<div id="/section-2/page-5" class="ft-page" data-id="page-5">
 				<header lang="fr">Où en sommes-nous ?</header>
 				<header lang="en">Where do we stand?</header>
 				<div class="stack-center">
@@ -751,6 +765,7 @@
 		<script src="js/sectors.js" async></script>
 		<script src="js/sustainable.js" async></script>
 		<script src="js/europe-co2.js" async></script>
+		<script src="js/income.js" async></script>
 		<script src="js/action.js" async></script>
 		<script src="js/vehicule.js" async></script>
 		<script src="js/food.js" async></script>

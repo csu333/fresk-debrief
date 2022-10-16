@@ -28,13 +28,19 @@ if (language == 'fr') {
 Highcharts.chart('container-clothing', {
   chart: {
     type: 'bar',
-	height: '250px'
+	height: '250px',
+    styledMode: true
   },
   title: {
     text: title,
   },
   xAxis: {
-    categories: clothingData.map(x => x.name)
+    categories: clothingData.map(x => x.name),
+    labels: {
+        style: {
+            fontSize: '1.5em'
+        }
+    }
   },
   yAxis: {
     title: {
@@ -62,17 +68,29 @@ Highcharts.chart('container-clothing', {
                     style: {
                         fontSize: '10px'
                     }
+                },
+            legend: {
+                x: 100,
+                y: -20,
+                width: '50%',
+                labelFormatter: function() {
+                    return "<b>" + this.name+"</b>";
+                },
+                itemStyle: {
+                    textOverflow: undefined,
+                    fontWeight: 'normal'
                 }
-            }
+              },
+            },
         }]
   },
   legend: {
     reversed: true,
 	useHTML: true,
 	floating: true,
-	x: 150,
-	y: -50,
-	width: '40%',
+	x: 210,
+	y: -70,
+	width: '50%',
 	labelFormatter: function() {
 		return "<b>" + this.name+"</b>";
 	},

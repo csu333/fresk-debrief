@@ -98,13 +98,29 @@ Highcharts.chart('container-food', {
   },
   title: {
     text: title,
+    style: {
+        fontSize: '2em'
+    }
   },
   xAxis: {
-    categories: foodData.map(x => language == 'fr' ? x.namefr : x.name)
+    categories: foodData.map(x => language == 'fr' ? x.namefr : x.name),
+    labels: {
+        style: {
+            fontSize: '1.3em'
+        }
+    }
   },
   yAxis: {
     title: {
-      text: yAxisLabel
+      text: yAxisLabel,
+      style: {
+            fontSize: '1.3em'
+        }
+    },
+    labels: {
+        style: {
+            fontSize: '1em'
+        }
     }
   },
   responsive: {

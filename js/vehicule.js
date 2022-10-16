@@ -36,14 +36,46 @@ var categories = [
 ]
 
 var bands = [
-    'Unipersonal<br/>transport',
-    'Petrol<br/>car',
-    'Diesel<br/>car',
-    'Electric<br/>car',
-    'Diesel<br/>minibus',
-    'Diesel<br/>bus',
-    'Electric<br/>train',
-    'Diesel<br/>train'
+    { 
+        title: 'Unipersonal<br/>transport',
+        from: -0.5,
+        to: 5.5
+    },
+    {
+        title: 'Petrol<br/>car',
+        from: 5.5,
+        to: 10.5
+    },
+    {
+        title: 'Diesel<br/>car',
+        from: 10.5,
+        to: 15.5
+    },    
+    { 
+        title: 'Electric<br/>car',
+        from: 15.5,
+        to: 20.5
+    },
+    { 
+        title: 'Diesel<br/>minibus',
+        from: 20.5,
+        to: 22.5
+    },
+    { 
+        title: 'Diesel<br/>bus',
+        from: 22.5,
+        to: 24.5
+    },
+    {
+        title: 'Electric<br/>train',
+        from: 24.5,
+        to: 26.5
+    },
+    { 
+        title: 'Diesel<br/>train',
+        from: 26.5,
+        to: 28.5
+    }
 ];
 
 var seriesName = [
@@ -90,16 +122,16 @@ if (language == "fr"){
         '200 passagers',
         'Avion'
     ];
-    bands = [
-        'Transport<br/>unipersonnel',
-        'Voiture<br/>essence',
-        'Voiture<br/>diesel',
-        'Voiture<br/>électrique',
-        'Minibus<br/>diesel',
-        'Autocar<br/>diesel',
-        'Train<br/>électrique',
-        'Train<br/>diesel'
-    ];
+    
+    bands[0].title = 'Transport<br/>unipersonnel';
+    bands[1].title = 'Voiture<br/>essence';
+    bands[2].title = 'Voiture<br/>diesel';
+    bands[3].title = 'Voiture<br/>électrique';
+    bands[4].title = 'Minibus<br/>diesel';
+    bands[5].title = 'Autocar<br/>diesel';
+    bands[6].title = 'Train<br/>électrique';
+    bands[7].title = 'Train<br/>diesel';
+    
     seriesName = [
         'Émissions moyennes',
         'Émissions moyennes cycle de vie complet'
@@ -170,16 +202,19 @@ var chartVehicule = Highcharts.chart('container-vehicule', {
 		plotBackgroundColor: {
             linearGradient: [0, 0, 0, 600],
             stops: [
-                [0, 'rgb(255, 220, 220)'],
-                [0.4, 'rgb(255, 220, 220)'],
-                [0.7, 'rgb(255, 255, 220)'],
-                [1, 'rgb(220, 255, 220)']
+                [0, 'rgba(255, 220, 220, 0.3)'],
+                [0.4, 'rgba(255, 220, 220, 0.3)'],
+                [0.7, 'rgba(255, 255, 220, 0.3)'],
+                [1, 'rgba(220, 255, 220, 0.3)']
             ]
-        }
+        },
     },
 
     title: {
-        text: title
+        text: title,
+        style: {
+            fontSize: '2em'
+        }
     },
 	
 	subtitle: {
@@ -188,101 +223,40 @@ var chartVehicule = Highcharts.chart('container-vehicule', {
 
     xAxis: [{
         categories: categories,
+        labels: {
+            style: {
+                fontSize: '1.3em'
+            }
+        },
         crosshair: true,
-		plotBands: [{
-            from: -0.5,
-            to: 5.5,
-            color: 'rgba(200, 200, 200, 0.3)',
-            label: {
-                text: '<em>' + bands[0] + '</em>',
-                style: {
-                    color: '#333333'
-                },
-                y: 20
+		plotBands: bands.map(function(element, index) {
+            return {
+                from: element.from,
+                to: element.to,
+                color: (index % 2 == 1) ? 'rgba(200, 200, 200, 0.3)' : 'rgba(200, 200, 200, 0.05)',
+                label: {
+                    text: '<em>' + element.title + '</em>',
+                    style: {
+                        color: '#333333',
+                        fontSize: '1.5em'
+                    },
+                    y: 20
+                }
             }
-        }, {
-            from: 5.5,
-            to: 10.5,
-            color: 'rgba(200, 200, 200, 0.05)',
-            label: {
-                text: '<em>' + bands[1] + '</em>',
-                style: {
-                    color: '#333333'
-                },
-                y: 20
-            }
-        }, {
-            from: 10.5,
-            to: 15.5,
-            color: 'rgba(200, 200, 200, 0.3)',
-            label: {
-                text: '<em>' + bands[2] + '</em>',
-                style: {
-                    color: '#333333'
-                },
-                y: 20
-            }
-        }, {
-            from: 15.5,
-            to: 20.5,
-            color: 'rgba(200, 200, 200, 0.05)',
-            label: {
-                text: '<em>' + bands[3] + '</em>',
-                style: {
-                    color: '#333333'
-                },
-                y: 20
-            }
-        }, {
-            from: 20.5,
-            to: 22.5,
-            color: 'rgba(200, 200, 200, 0.3)',
-            label: {
-                text: '<em>' + bands[4] + '</em>',
-                style: {
-                    color: '#333333'
-                },
-                y: 20
-            }
-        }, {
-            from: 22.5,
-            to: 24.5,
-            color: 'rgba(200, 200, 200, 0.05)',
-            label: {
-                text: '<em>' + bands[5] + '</em>',
-                style: {
-                    color: '#333333'
-                },
-                y: 20
-            }
-        }, {
-            from: 24.5,
-            to: 26.5,
-            color: 'rgba(200, 200, 200, 0.3)',
-            label: {
-                text: '<em>' + bands[6] + '</em>',
-                style: {
-                    color: '#333333'
-                },
-                y: 20
-            }
-        }, {
-            from: 26.5,
-            to: 28.5,
-            color: 'rgba(200, 200, 200, 0.05)',
-            label: {
-                text: '<em>' + bands[7] + '</em>',
-                style: {
-                    color: '#333333'
-                },
-                y: 20
-            }
-        }]
+        })
     }],
 
     yAxis: {
         title: {
-            text: yAxisTitle
+            text: yAxisTitle,
+            style: {
+                fontSize: '1.3em'
+            }
+        },
+        labels: {
+            style: {
+                fontSize: '1.3em'
+            }
         },
         min: 0,
 		max: 400
@@ -295,96 +269,21 @@ var chartVehicule = Highcharts.chart('container-vehicule', {
             },
             chartOptions: {
                 xAxis: {
-                    //categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-					plotBands: [{
-						from: -0.5,
-						to: 5.5,
-						color: 'rgba(200, 200, 200, 0.3)',
-						label: {
-							text: '<em>Transport<br/>unipersonnel</em>',
-							style: {
-								color: '#333333'
-							},
-							y: 20
-						}
-					}, {
-						from: 5.5,
-						to: 10.5,
-						color: 'rgba(200, 200, 200, 0.05)',
-						label: {
-							text: '<em>Voiture<br/>essence</em>',
-							style: {
-								color: '#333333'
-							},
-							y: 60
-						}
-					}, {
-						from: 10.5,
-						to: 15.5,
-						color: 'rgba(200, 200, 200, 0.3)',
-						label: {
-							text: '<em>Voiture<br/>diesel</em>',
-							style: {
-								color: '#333333'
-							},
-							y: 20
-						}
-					}, {
-						from: 15.5,
-						to: 20.5,
-						color: 'rgba(200, 200, 200, 0.05)',
-						label: {
-							text: '<em>Voiture<br/>électrique</em>',
-							style: {
-								color: '#333333'
-							},
-							y: 60
-						}
-					}, {
-						from: 20.5,
-						to: 22.5,
-						color: 'rgba(200, 200, 200, 0.3)',
-						label: {
-							text: '<em>Minibus<br/>diesel</em>',
-							style: {
-								color: '#333333'
-							},
-							y: 20
-						}
-					}, {
-						from: 22.5,
-						to: 24.5,
-						color: 'rgba(200, 200, 200, 0.05)',
-						label: {
-							text: '<em>Autocar<br/>diesel</em>',
-							style: {
-								color: '#333333'
-							},
-							y: 60
-						}
-					}, {
-						from: 24.5,
-						to: 26.5,
-						color: 'rgba(200, 200, 200, 0.3)',
-						label: {
-							text: '<em>Train<br/>électrique</em>',
-							style: {
-								color: '#333333'
-							},
-							y: 20
-						}
-					}, {
-						from: 26.5,
-						to: 28.5,
-						color: 'rgba(200, 200, 200, 0.05)',
-						label: {
-							text: '<em>Train<br/>diesel</em>',
-							style: {
-								color: '#333333'
-							},
-							y: 60
-						}
-					}]
+                    plotBands: 
+                    bands.map(function(element, index) {
+                        return {
+                            from: element.from,
+                            to: element.to,
+                            color: (index % 2 == 1) ? 'rgba(200, 200, 200, 0.3)' : 'rgba(200, 200, 200, 0.05)',
+                            label: {
+                                text: '<em>' + element.title + '</em>',
+                                style: {
+                                    color: '#333333'
+                                },
+                                y: (index % 2 == 0) ? 20 : 60
+                            }
+                        }
+                    })
                 }
             }
         }]

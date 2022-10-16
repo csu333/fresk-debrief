@@ -246,7 +246,7 @@ if (language == 'fr') {
 
 Highcharts.chart('container-annual-ghg', {  
 	chart: {
-		height: '75%' // 16:9 ratio
+		height: '75%', // 16:9 ratio
 	},
 
     /*responsive: {
@@ -320,6 +320,9 @@ Highcharts.chart('container-annual-ghg', {
 		text: subtitle
 	},
 	title: {
-		text: title
+		text: title,
+        style: {
+            fontSize: '2em'
+        }
 	}
 });

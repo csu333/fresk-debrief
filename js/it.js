@@ -31,12 +31,13 @@ if (language == 'fr') {
 Highcharts.chart('container-it', {
   chart: {
     type: 'bar',
+    styledMode: true
   },
   title: {
     text: title,
   },
   xAxis: {
-    categories: itData.map(x => x.name)
+    categories: itData.map(x => x.name),
   },
   yAxis: {
     title: {
@@ -55,16 +56,8 @@ Highcharts.chart('container-it', {
 				legend: {
 					labelFormatter: function() {
 						return "<b>" + this.name + "</b>";
-					},
-                    itemStyle: {
-                        fontSize: '9px'
-                    }
-				},
-                title: {
-                    style: {
-                        fontSize: '10px'
-                    }
-                }
+					}
+				}
             }
         }]
   },

@@ -32,7 +32,10 @@ Highcharts.chart('container-sustainable', {
 	},
 
 	title: {
-		text: title
+		text: title,
+        style: {
+            fontSize: '2em'
+        }
 	},
 
 	subtitle: {

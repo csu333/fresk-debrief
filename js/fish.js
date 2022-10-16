@@ -27,11 +27,21 @@ const fishData = [
 
 fishData.sort(function(a, b) { return (b.value) - (a.value) })
 
+fishData.series = [
+    {
+        data: []
+    },
+    {  
+        data: []
+    }
+]
 fishData.forEach( (fish) => {
 	if (fish.farmed === undefined) {
 		fish.color = Highcharts.getOptions().colors[2]
+        fishData.series[1].data += fish;
 	} else if (fish.farmed) {
 		fish.color = Highcharts.getOptions().colors[1]
+        fishData.series[0].data += fish;
 	}
 	fish.y = fish.value
 })
@@ -58,7 +68,10 @@ Highcharts.chart('container-fish', {
     type: 'bar'
   },
   title: {
-    text: title
+    text: title,
+    style: {
+        fontSize: '2em'
+    }
   },
   subtitle: {
 	  text: subtitle
@@ -88,11 +101,24 @@ Highcharts.chart('container-fish', {
     }]
   },
   xAxis: {
-    categories: fishData.map(x => language =='fr' ? x.namefr : x.name)
+    categories: fishData.map(x => language =='fr' ? x.namefr : x.name),
+    labels: {
+        style: {
+            fontSize: '1.3em'
+        }
+    }
   },
   yAxis: {
     title: {
-      text: 'Émissions de gas à effet de serre (kg CO₂eq par kilo de produit)'
+      text: 'Émissions de gas à effet de serre (kg CO₂eq par kilo de produit)',
+      style: {
+            fontSize: '1.3em'
+        }
+    },
+    labels: {
+        style: {
+            fontSize: '1em'
+        }
     }
   },
  legend: {
@@ -116,10 +142,12 @@ Highcharts.chart('container-fish', {
 		groupPadding: 0
     },
   },
-  series: [{
-    name: seriesLabel[0],
-    data: fishData
-  }, {
-	  name: seriesLabel[1]
-  }]
+  series: [
+    {
+        name: seriesLabel[0],
+        data: fishData
+    }, {
+        name: seriesLabel[1]
+    }
+  ]
 });

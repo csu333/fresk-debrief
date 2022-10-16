@@ -54,15 +54,21 @@ if (language == 'fr') {
 			spacingTop: 30,
 			spacingBottom: 30,
 			height: '70%',
-			backgroundColor: 'transparent'
+			backgroundColor: 'transparent',
 		},
 
 		title: {
-			text: title
+			text: title,
+            style: {
+                fontSize: '2em'
+            }
 		},
 		
 		subtitle: {
-			text: subtitle
+			text: subtitle,
+            style: {
+              fontSize:'1.4em'
+            }
 		},
 
 		legend: {
@@ -128,7 +134,7 @@ charts.push(Highcharts.chart(containers[0], {
 	marginLeft: 90,
 	marginRight: 0,
 	marginTop: 30,
-	backgroundColor: 'transparent'
+	backgroundColor: 'transparent',
   },
   
   title: {
@@ -139,15 +145,6 @@ charts.push(Highcharts.chart(containers[0], {
         rules: [{
             condition: {
                 maxWidth: 170
-            },
-            chartOptions: {
-                xAxis:{
-                    labels:{
-                        style: {
-                            fontSize: '8px'
-                        }
-                    }
-                }
             }
         }]
     },
@@ -163,8 +160,11 @@ charts.push(Highcharts.chart(containers[0], {
   xAxis: {
 	categories: sourceData.slice(0, sourceData.length/2 + 1).map(item => language == 'fr' ? item.namefr : item.name),
 	labels: {
-	  enabled: true
-	}
+	  enabled: true,
+      style: {
+        fontSize:'1.1em'
+      }
+	},
   },
 
   yAxis: {
@@ -177,7 +177,6 @@ charts.push(Highcharts.chart(containers[0], {
 	labels: {
 		enabled: false
 	},
-	gridLineColor: 'transparent'
   },
 
 
@@ -204,7 +203,10 @@ plotOptions: {
 		dataLabels: {
 			enabled: true,
 			color: '#000',
-			style: {fontWeight: 'bolder'},
+			style: {
+                fontSize: '1.5em',
+                fontWeight: 'bolder'
+            },
 			formatter: function() {return this.y},
 			inside: false
 		},
@@ -265,8 +267,11 @@ charts.push(Highcharts.chart(containers[2], {
 	labels: {
 	  enabled: true,
 	  x: 170,
-	  align: 'left'
-	}
+	  align: 'left',
+      style: {
+        fontSize:'1.1em'
+      }
+	},
   },
 
   yAxis: {
@@ -280,7 +285,6 @@ charts.push(Highcharts.chart(containers[2], {
 	labels: {
 		enabled: false
 	},
-	gridLineColor: 'transparent'
   },
 
 	colorAxis: {
@@ -306,7 +310,10 @@ plotOptions: {
 		dataLabels: {
 			enabled: true,
 			color: '#000',
-			style: {fontWeight: 'bolder'},
+			style: {
+                fontSize: '1.5em',
+                fontWeight: 'bolder'
+            },
 			formatter: function() {return this.y},
 			inside: false
 		},
@@ -327,7 +334,7 @@ charts.push(Highcharts.chart(containers[0], {
 	marginLeft: 90,
 	marginRight: 0,
 	marginTop: 30,
-	backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
   },
   
   title: {
@@ -346,7 +353,7 @@ charts.push(Highcharts.chart(containers[0], {
 	categories: sourceData.slice(0, sourceData.length/2 + 1).map(item => item.code),
 	labels: {
 	  enabled: false
-	}
+	},
   },
 
   yAxis: {
@@ -359,7 +366,6 @@ charts.push(Highcharts.chart(containers[0], {
 	labels: {
 		enabled: false
 	},
-	gridLineColor: 'transparent'
   },
   
 	colorAxis: {
@@ -397,7 +403,6 @@ charts.push(Highcharts.chart(containers[2], {
 	marginLeft: 0,
 	marginRight: 80,
 	marginTop: 30,
-	backgroundColor: 'transparent',
   },
 
   title: {
@@ -416,7 +421,7 @@ charts.push(Highcharts.chart(containers[2], {
 	categories: sourceData.slice(0, sourceData.length/2 + 1).map(item => item.code),
 	labels: {
         enabled: false
-      }
+      },
   },
 
   yAxis: {
@@ -430,7 +435,6 @@ charts.push(Highcharts.chart(containers[2], {
 	labels: {
 		enabled: false
 	},
-	gridLineColor: 'transparent'
   },
 
   legend: {

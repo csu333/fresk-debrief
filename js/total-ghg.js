@@ -340,6 +340,9 @@ Highcharts.chart('container-total-ghg', {
 		text: subtitle
 	},
 	title: {
-		text: title
+		text: title,
+        style: {
+            fontSize: '2em'
+        }
 	}
 });

@@ -1,3 +1,4 @@
+
 .highcharts-figure,
 .highcharts-data-table table {
     min-width: 10px;
@@ -55,9 +56,29 @@
     background: #f1f7ff;
 }
 
+.highcharts-title {
+    font-size: 2em;
+}
+
 #container-europe-co2 {
 	height: 100%;
 	width: 100%;
+}
+
+.trellis .highcharts-background,
+#container-europe-co2 .highcharts-background {
+    fill: transparent;
+}
+.trellis .highcharts-grid-line,
+.trellis .highcharts-plot-background,
+#container-europe-co2 .highcharts-plot-background {
+    fill: transparent;
+    stroke: transparent;
+}
+
+.trellis .highcharts-data-label,
+#container-europe-co2 .highcharts-data-label {
+    font-size: 0.6em;
 }
 
 .trellis {
@@ -74,10 +95,66 @@
 	width: auto;
 }
 
-/*.highcharts-color-0 {
-	fill: rgba(50,240,60,0.5)
+#container-vehicule .highcharts-plot-background,
+#container-vehicule .highcharts-background {
+    fill: transparent;
 }
 
-.highcharts-color-1 {
-	fill: rgba(124,181,236,0.5)
-}*/
+/* Default colors */
+ .highcharts-annotation-label-box,
+ #container-it .highcharts-color-0,
+ #container-clothing .highcharts-color-0,
+ #container-vehicule .highcharts-color-0, 
+ #container-income .highcharts-color-0 {
+    fill: #7cb5ec;
+    stroke: #7cb5ec;
+  }
+  
+  #container-it .highcharts-color-1,
+  #container-clothing .highcharts-color-1,
+  #container-income .highcharts-color-1 {
+    fill: #434348;
+    stroke: #434348;
+  }
+  
+  #container-clothing .highcharts-color-2,
+  #container-income .highcharts-color-2 {
+    fill: #90ed7d;
+    stroke: #90ed7d;
+  }
+  
+  #container-clothing .highcharts-color-3,
+  #container-income .highcharts-color-3 {
+    fill: #f7a35c;
+    stroke: #f7a35c;
+  }
+  
+  #container-income .highcharts-color-4 {
+    fill: #8085e9;
+    stroke: #8085e9;
+  }
+  
+  #container-income .highcharts-color-5 {
+    fill: #f15c80;
+    stroke: #f15c80;
+  }
+  
+  #container-income .highcharts-color-6 {
+    fill: #e4d354;
+    stroke: #e4d354;
+  }
+  
+  #container-income .highcharts-color-7 {
+    fill: #2b908f;
+    stroke: #2b908f;
+  }
+  
+  #container-income .highcharts-color-8 {
+    fill: #f45b5b;
+    stroke: #f45b5b;
+  }
+  
+  #container-income .highcharts-color-9 {
+    fill: #91e8e1;
+    stroke: #91e8e1;
+  }

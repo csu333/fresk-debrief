@@ -107,15 +107,31 @@ Highcharts.chart('container-action', {
 		  }}
 	},
 	title: {
-		text: title
+		text: title,
+        style: {
+            fontSize: '2em'
+        }
 	},
 	xAxis: {
-		type: 'category'
+		type: 'category',
+        labels: {
+            style: {
+                fontSize:'1.5em'
+            }
+        }
 	},
 	yAxis: {
 		title: {
-			text: yAxisLabel
-		}
+			text: yAxisLabel,
+            style: {
+                fontSize: '1.3em'
+            }
+		},
+        labels: {
+            style: {
+                fontSize:'1em'
+            }
+        }
 
 	},
 	legend: {
@@ -126,14 +142,17 @@ Highcharts.chart('container-action', {
 			borderWidth: 0,
 			dataLabels: {
 				enabled: true,
-				style: {fontWeight: 'bolder'},
+				style: {
+                    fontWeight: 'bolder',
+                    fontSize: '1.5em'
+                },
 				format: '{point.y:.2f}'
 			}
 		},
 	},
 
 	tooltip: {
-		headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+		/*headerFormat: '<span style="font-size:1.5em">{series.name}</span><br>',*/
 		pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
 	},
 
@@ -142,7 +161,7 @@ Highcharts.chart('container-action', {
 		dataSorting: {
 			enabled: true,
 		},
-		showInLegend: false
+		showInLegend: false,
 	}, {
 		type: 'pie',
 		title: 'Total: 2,8 t CO₂eq',
@@ -159,7 +178,7 @@ Highcharts.chart('container-action', {
 			distance: '-20%'
 		},
 		tooltip: {
-			headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+			headerFormat: '<span style="font-size:1.5em">{series.name}</span><br>',
 			pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> du total<br/>'
 		},
 	  }],

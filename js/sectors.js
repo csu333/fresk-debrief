@@ -261,7 +261,10 @@ const chart = Highcharts.chart('container-sectors', {
 	height: '100%' // 16:9 ratio
   },
   title: {
-	text: title
+	text: title,
+    style: {
+        fontSize: '2em'
+    }
   },
   responsive: {
     rules: [{
@@ -271,11 +274,6 @@ const chart = Highcharts.chart('container-sectors', {
         chartOptions: {
             chart: {
                 height: '50%'
-            },
-            title: {
-                style: {
-                    fontSize: '11px'
-                }
             },
         }
     }]

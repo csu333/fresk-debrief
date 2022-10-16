@@ -109,7 +109,7 @@ Highcharts.chart('container-action', {
 	title: {
 		text: title,
         style: {
-            fontSize: '2em'
+            fontSize: '1.5rem'
         }
 	},
 	xAxis: {

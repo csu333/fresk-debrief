@@ -60,7 +60,7 @@ if (language == 'fr') {
 		title: {
 			text: title,
             style: {
-                fontSize: '2em'
+                fontSize: '1.5rem'
             }
 		},
 		

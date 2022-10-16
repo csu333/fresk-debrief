@@ -263,7 +263,7 @@ const chart = Highcharts.chart('container-sectors', {
   title: {
 	text: title,
     style: {
-        fontSize: '2em'
+        fontSize: '1.5rem'
     }
   },
   responsive: {

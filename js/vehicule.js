@@ -213,7 +213,7 @@ var chartVehicule = Highcharts.chart('container-vehicule', {
     title: {
         text: title,
         style: {
-            fontSize: '2em'
+            fontSize: '1.5rem'
         }
     },
 	

@@ -99,7 +99,7 @@ Highcharts.chart('container-food', {
   title: {
     text: title,
     style: {
-        fontSize: '2em'
+        fontSize: '1.5rem'
     }
   },
   xAxis: {

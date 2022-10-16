@@ -34,7 +34,7 @@ Highcharts.chart('container-sustainable', {
 	title: {
 		text: title,
         style: {
-            fontSize: '2em'
+            fontSize: '1.5rem'
         }
 	},
 

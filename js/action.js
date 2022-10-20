@@ -56,8 +56,8 @@ const dataAction = [{
 	}]
 }]
 
-const colData = [];
-const pieData = [];
+var colData = [];
+var pieData = [];
 var total = 0;
 
 for (const sector in dataAction) {

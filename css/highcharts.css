@@ -102,6 +102,7 @@
 
 /* Default colors */
  .highcharts-annotation-label-box,
+ #container-income-percentage .highcharts-color-0,
  #container-it .highcharts-color-0,
  #container-clothing .highcharts-color-0,
  #container-vehicule .highcharts-color-0, 
@@ -117,18 +118,21 @@
     stroke: #434348;
   }
   
+  #container-income-percentage .highcharts-color-2,
   #container-clothing .highcharts-color-2,
   #container-income .highcharts-color-2 {
     fill: #90ed7d;
     stroke: #90ed7d;
   }
   
+  #container-income-percentage .highcharts-color-3,
   #container-clothing .highcharts-color-3,
   #container-income .highcharts-color-3 {
     fill: #f7a35c;
     stroke: #f7a35c;
   }
   
+  #container-income-percentage .highcharts-color-1,
   #container-income .highcharts-color-4 {
     fill: #8085e9;
     stroke: #8085e9;

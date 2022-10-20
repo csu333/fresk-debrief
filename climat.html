@@ -191,13 +191,21 @@
 				<header lang="fr">Où en sommes-nous ?</header>
 				<header lang="en">Where do we stand?</header>
 				<div class="stack-center">
-					<div class="stacked-center">
-						<figure class="highcharts-figure">
-							<div class="chart" id="container-income"></div>
-							<span class="source">Source: <a
-									href="https://www.cambridge.org/core/journals/global-sustainability/article/unequal-distribution-of-household-carbon-footprints-in-europe-and-its-link-to-sustainability/F1ED4F705AF1C6C1FCAD477398353DC2">Ivanova, D., & Wood, R. (2020)</a></span>
-						</figure>
-					</div>
+					<div class="side-by-side">
+                        <div class="left">
+                            <figure class="highcharts-figure">
+                                <div class="chart" id="container-income-percentage"></div>
+                            </figure>
+                        </div>
+                        <div class="right">
+                            <figure class="highcharts-figure">
+                                <div class="chart" id="container-income"></div>
+                            </figure>
+                        </div>
+                    </div>
+                    <span class="source">Source: <a
+                        href="https://www.cambridge.org/core/journals/global-sustainability/article/unequal-distribution-of-household-carbon-footprints-in-europe-and-its-link-to-sustainability/F1ED4F705AF1C6C1FCAD477398353DC2">Ivanova, D., & Wood, R. (2020)</a></span>
+                
 				</div>
 			</div>
 			<div id="/section-2/page-4" class="ft-page" data-id="page-4">
@@ -765,6 +773,7 @@
 		<script src="js/sectors.js" async></script>
 		<script src="js/sustainable.js" async></script>
 		<script src="js/europe-co2.js" async></script>
+		<script src="js/income-percentage.js" async></script>
 		<script src="js/income.js" async></script>
 		<script src="js/action.js" async></script>
 		<script src="js/vehicule.js" async></script>

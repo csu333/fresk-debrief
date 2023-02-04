@@ -176,7 +176,7 @@ Highcharts.seriesType('lowmedhigh', 'boxplot', {
 
             graphic.attr({
                 stroke: point.color || series.color,
-                "stroke-width": 1
+                "stroke-width": 3
             });
 
             graphic[verb]({
@@ -460,7 +460,7 @@ var chartVehicule = Highcharts.chart('container-vehicule', {
             overflow: 'justify',
 			text: '<br>591'
         }],
-		zIndex: 1,
+		zIndex: 3,
 		draggable: ''
 	}],
 });

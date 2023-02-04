@@ -109,14 +109,14 @@ Highcharts.chart('container-action', {
 	title: {
 		text: title,
         style: {
-            fontSize: '1.5rem'
+            fontSize: '2rem'
         }
 	},
 	xAxis: {
 		type: 'category',
         labels: {
             style: {
-                fontSize:'1.5em'
+                fontSize:'2em'
             }
         }
 	},
@@ -124,12 +124,12 @@ Highcharts.chart('container-action', {
 		title: {
 			text: yAxisLabel,
             style: {
-                fontSize: '1.3em'
+                fontSize: '2em'
             }
 		},
         labels: {
             style: {
-                fontSize:'1em'
+                fontSize:'2em'
             }
         }
 

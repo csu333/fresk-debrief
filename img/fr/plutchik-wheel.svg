@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="715px" height="725px" viewBox="0 0 715 725">
-<g id="circles" fill="none" stroke="#000" stroke-width="2">
+<g id="circles" fill="none" stroke="#000" stroke-width="1">
 	<circle id="outer-ring" stroke-dasharray="6" cx="357.5" cy="362.5" r="250"/>
 	<circle id="inner-ring" stroke-dasharray="4" cx="357.5" cy="362.5" r="188"/>
 </g>
-<g id="areas" stroke="#000" stroke-width="2">
+<g id="areas" stroke="#000" stroke-width="1">
 	<path fill="#FFC5C5" d="M110.303,325.048C84.749,332.483,58.82,344.254,33,362.488
 		c24.984,18.157,51.076,29.983,77.296,37.476C106.462,374.791,106.564,349.555,110.303,325.048z"/>
 	<path fill="#C5E2C5" d="M604.723,399.955c26.213-7.488,52.3-19.314,77.277-37.47
@@ -83,56 +83,56 @@
 	<path fill="#FFE1C5" d="M209.157,161.228c-23.319-12.811-49.961-22.827-81.104-28.189
 		c4.828,30.509,14.916,57.321,28.161,81.157C170.896,194.229,188.659,176.313,209.157,161.228z"/>
 </g>
-<g id="text" font-family="'DejaVu Sans'" font-size="14">
+<g id="text" font-family="'DejaVu Sans'" font-size="20" fill-rule="evenodd">
 	<g>
-		<text transform="matrix(1 0 0 1 216 117.1)">optimisme</text>
-		<text transform="matrix(1 0 0 1 456 117.1)">amour</text>
-		<text transform="matrix(1 0 0 1 10 262.6)">aggressivité</text>
+		<text transform="matrix(1 0 0 1 190 110)">optimisme</text>
+		<text transform="matrix(1 0 0 1 420 110)">amour</text>
+		<text transform="matrix(1 0 0 1 0 262.6)">aggressivité</text>
 		<text transform="matrix(1 0 0 1 600 262.6)">soumission</text>
 		<text transform="matrix(1 0 0 1 45 470.6)">mépris</text>
 		<text transform="matrix(1 0 0 1 600 470.6)">admiration</text>
-		<text transform="matrix(1 0 0 1 220 619.4)">remord</text>
-		<text transform="matrix(1 0 0 1 432 619.4)">désapprobation</text>
+		<text transform="matrix(1 0 0 1 210 625)">remord</text>
+		<text transform="matrix(1 0 0 1 412 625)">désapprobation</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 89 367.2)">contrariété</text>
-		<text transform="matrix(1 0 0 1 182 367.2)">colère</text>
+		<text transform="matrix(1 0 0 1 50 367.2)">contrariété</text>
+		<text transform="matrix(1 0 0 1 170 367.2)">colère</text>
 		<text transform="matrix(1 0 0 1 251 367.2)">rage</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 265 311.1)">vigilance</text>
-		<text transform="matrix(1 0 0 1 215 250.1)">anticipation</text>
+		<text transform="matrix(1 0 0 1 250 311.1)">vigilance</text>
+		<text transform="matrix(1 0 0 1 200 250.1)">anticipation</text>
 		<text transform="matrix(1 0 0 1 178 212.1)">intérêt</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 332 273)">extase</text>
+		<text transform="matrix(1 0 0 1 327 273)">extase</text>
 		<text transform="matrix(1 0 0 1 346 214)">joie</text>
-		<text transform="matrix(1 0 0 1 329 149)">sérénité</text>
+		<text transform="matrix(1 0 0 1 315 149)">sérénité</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 387 311.1)">admiration</text>
-		<text transform="matrix(1 0 0 1 425 250.1)">confiance</text>
-		<text transform="matrix(1 0 0 1 471 212.1)">acceptation</text>
+		<text transform="matrix(1 0 0 1 387 311)">admiration</text>
+		<text transform="matrix(1 0 0 1 413 250)">confiance</text>
+		<text transform="matrix(1 0 0 1 461 205)">acceptation</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 413 367.2)">terreur</text>
-		<text transform="matrix(1 0 0 1 498 367.2)">peur</text>
+		<text transform="matrix(1 0 0 1 400 367.2)">terreur</text>
+		<text transform="matrix(1 0 0 1 490 367.2)">peur</text>
 		<text transform="matrix(1 0 0 1 550 367.2)">appréhension</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 381 423.1)">étonnement</text>
-		<text transform="matrix(1 0 0 1 440 475.4)">surprise</text>
+		<text transform="matrix(1 0 0 1 384 425.1)">étonnement</text>
+		<text transform="matrix(1 0 0 1 430 475.4)">surprise</text>
 		<text transform="matrix(1 0 0 1 470 525.4)">distraction</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 325 583)">songerie</text>
-		<text transform="matrix(1 0 0 1 330 520)">tristesse</text>
-		<text transform="matrix(1 0 0 1 332 463)" fill="#FFF">chagrin</text>
+		<text transform="matrix(1 0 0 1 315 583)">songerie</text>
+		<text transform="matrix(1 0 0 1 315 520)">tristesse</text>
+		<text transform="matrix(1 0 0 1 320 463)" fill="#FFF">chagrin</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 185 525.4)">ennui</text>
-		<text transform="matrix(1 0 0 1 224 475.4)">dégout</text>
-		<text transform="matrix(1 0 0 1 263 423.1)">aversion</text>
+		<text transform="matrix(1 0 0 1 175 525.4)">ennui</text>
+		<text transform="matrix(1 0 0 1 208 475.4)">dégout</text>
+		<text transform="matrix(1 0 0 1 247 423.1)">aversion</text>
 	</g>
 </g>
 </svg>

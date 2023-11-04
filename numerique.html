@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Diminuer son empreinte numérique</title>
+    <style>
+
+          table {
+              border-collapse: collapse;
+              width: 100%;
+          }
+
+          th, td {
+              text-align: left;
+              padding: 8px;
+          }
+
+          tr:nth-child(even){background-color: #f2f2f2}
+
+          .header {
+              background-color: #21759b;
+              color: white;
+          }
+
+      /*
+      Max width before this PARTICULAR table gets nasty
+      This query will take effect for any screen smaller than 760px
+      and also iPads specifically.
+      Source: https://css-tricks.com/responsive-data-tables/
+      */
+      @media
+      only screen and (max-width: 760px) {
+
+      	/* Force table to not be like tables anymore */
+      	table, thead, tbody, th, td, tr {
+      		display: block;
+      	}
+
+      	/* Hide table headers (but not display: none;, for accessibility) */
+      	thead tr {
+      		position: absolute;
+      		top: -9999px;
+      		left: -9999px;
+      	}
+
+          th {
+              background-color: #21759b;
+              color: white;
+          }
+
+      	tr { border: 1px solid #ccc; }
+
+      	td {
+      		/* Behave  like a "row" */
+      		border: none;
+      		border-bottom: 1px solid #eee;
+      		position: relative;
+      		padding-left: 45%;
+      	}
+
+      	td:before {
+      		/* Now like a table header */
+      		position: absolute;
+      		/* Top/left values mimic padding */
+      		top: 6px;
+      		left: 6px;
+      		width: 40%;
+      		padding-right: 10px;
+      		white-space: nowrap;
+      	}
+
+      	/*
+      	Label the data
+      	*/
+      	td:nth-of-type(1):before { content: "Action"; font-weight: bold; margin-bottom: 30px;}
+      	td:nth-of-type(2):before { content: "Catégorie"; }
+      	td:nth-of-type(3):before { content: "Acteur ou resource"; }
+      	td:nth-of-type(4):before { content: "Commentaire"; }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Diminuer son empreinte numérique</h2>
+
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th class="header">Action</th>
+          <th class="header">Catégorie</th>
+          <th class="header">Acteur ou ressource</th>
+          <th class="header">Commentaire</th>
+        </tr>
+      </thead>
+      <tr>
+        <th colspan="4">Limiter notre quantité d'équipement</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Se limiter</td>
+        <td colspan="2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://lesecolohumanistes.fr/la-methode-bisou/"
+            >La méthode BISOU</a>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="4">Acheter d'occasion / reconditionné</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Reconditionneurs</td>
+        <td colspan="2">
+          Voir cette
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQcgO5otXj7iIzSQlTH7FagwiAkpMYY0KCt91OXtVbY7PqwXCGI2hnFyqn3l34wpnFe71CAv0fylvbS/pubhtml?gid=80129252&single=true"
+            >liste des reconditionneurs</a>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="4">Redonner vie à notre matériel inutilisé</th>
+      </tr>
+      <tr>
+        <th colspan="4" onclick="toggleTable('groupProteger')">
+          Protéger et prendre soin de notre matériel
+        </th>
+      </tr>
+      <tr class="groupProteger">
+        <td>&nbsp;</td>
+        <td>Extérieur</td>
+        <td colspan="2">
+          Housses, coques et protections d'écran sont tes amis! 😉
+        </td>
+      </tr>
+      <tr class="groupProteger">
+        <td>&nbsp;</td>
+        <td>Batterie</td>
+        <td colspan="2">
+          Eviter les températures extrêmes, les vitesses de charge élevées et
+          les niveaux de charge extrêmes (maintenir la charge entre 30 et 80%
+          idéalement)
+        </td>
+      </tr>
+      <tr>
+        <th colspan="4">Réparer notre matériel</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Réparer</td>
+        <td colspan="2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://repaircafe.org/fr/"
+            >Repair Cafe</a>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="4">Faire preuve de sobriété numérique</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Captation d'attention</td>
+        <td colspan="2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1JrlMUKl_Jw1WhNrkgkzpwYgO1T8oye8F/view"
+            >Les idées du collectif <i>Lève les Yeux</i></a>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="4">Réduire le nombre et la taille des écrans</th>
+      </tr>
+      <tr>
+        <th colspan="4" onclick="toggleTable('groupRaisonnerUsages')">
+          Raisonner nos usages numériques
+        </th>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Qualité vidéo</td>
+        <td colspan="2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://chrome.google.com/webstore/detail/auto-quality-for-youtube/iaddfgegjgjelgkanamleadckkpnjpjc"
+            >Extension Chrome pour ajuster automatiquement la qualité vidéo</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Qualité vidéo</td>
+        <td>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://support.google.com/youtube/answer/91449?hl=fr"
+            >YouTube</a>
+        </td>
+        <td>
+          Les utilisateurs Premium peuvent
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://support.google.com/youtube/answer/11977233?hl=fr&co=GENIE.Platform%3DAndroid&sjid=4394071264090304395-EU"
+            >regarder leurs vidéos hors ligne</a>. Également envisager des applications alternatives comme
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://newpipe.net/"
+            >NewPipe</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Qualité vidéo</td>
+        <td>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.hardreset.info/fr/devices/apps/apps-tiktok/activer-leconomiseur-de-donnees/"
+            >TikTok</a>
+        </td>
+        <td>
+          Penser à
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://support.tiktok.com/fr/using-tiktok/exploring-videos/video-downloads"
+            >télécharger les vidéos sur le wifi</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Qualité vidéo</td>
+        <td>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://help.netflix.com/fr/node/87"
+            >Netflix</a>
+        </td>
+        <td>
+          Penser à
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://help.netflix.com/fr/node/54816"
+            >télécharger les vidéos sur le wifi</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Qualité vidéo</td>
+        <td>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://help.disneyplus.com/fr/article/disneyplus-fr-fr-managing-data-usage"
+            >Disney+</a>
+        </td>
+        <td>
+          Penser à
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://help.disneyplus.com/fr/article/disneyplus-fr-fr-downloads"
+            >télécharger les vidéos sur le wifi</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Qualité vidéo</td>
+        <td>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.moyens.net/comment/comment-modifier-qualite-streaming-video-amazon-prime-sur-nimporte-quel/"
+            >Prime Video</a>
+        </td>
+        <td>
+          Penser à
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.primevideo.com/help?nodeId=GMF637NHNEF9D8GT"
+            >télécharger les vidéos sur le wifi</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Qualité audio</td>
+        <td>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://support.spotify.com/fr/article/audio-quality/"
+            >Spotify</a>
+        </td>
+        <td>
+          Penser à
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://support.spotify.com/fr/article/listen-offline/"
+            >télécharger vos album sur le wifi</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Lecture automatique des vidéos</td>
+        <td colspan="2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/help/1406493312950827?helpref=faq_content"
+            >Facebook</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Lecture automatique des vidéos</td>
+        <td colspan="2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.carlcare.com/global/tips-detail/stop-videos-from-automatically-playing-on-instagram/"
+            >Instagram</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Lecture automatique des vidéos</td>
+        <td colspan="2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/help/linkedin/answer/a565326/disabling-autoplay-of-videos?lang=fr-FR&intendedLocale=fr"
+            >LinkedIn</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Réseau</td>
+        <td>
+          Pour les utilisateurs mobile moyens:
+          <a target="_blank" rel="noopener noreferrer" href="https://neibo.be/"
+            >Neibo</a>
+        </td>
+        <td>Coopérative belge de télécommunication</td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Réseau</td>
+        <td>
+          Pour les gros consommateurs mobile:
+          <a target="_blank" rel="noopener noreferrer" href="https://undo.be/"
+            >UNDO</a>
+        </td>
+        <td>
+          Les autres actions devraient vous permettre de ne pas arriver dans
+          cette catégorie 😉
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Réseau</td>
+        <td colspan="2">
+          Privilégier les favoris ou l'historique du navigateur plutôt que des
+          recherches internet
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Réseau</td>
+        <td colspan="2">Limiter le nombre d'onglets ouverts</td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Réseau</td>
+        <td>Bloquer les publicités</td>
+        <td>
+          Utiliser
+          <a target="_blank" rel="noopener noreferrer" href="https://brave.com/"
+            >l'explorateur Brave</a>
+          ou installer un bloqueur de publicités comme
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://ublockorigin.com/"
+            >uBlock Origin</a>
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Réseau</td>
+        <td colspan="2">
+          Utiliser
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.ecosia.org"
+            >Ecosia</a>
+          pour vos recherches
+        </td>
+      </tr>
+      <tr class="groupRaisonnerUsages">
+        <td>&nbsp;</td>
+        <td>Réseau</td>
+        <td colspan="2">Faire les mises à jour sur le wifi</td>
+      </tr>
+      <tr>
+        <th colspan="4">Dé-numériser nos activités</th>
+      </tr>
+      <tr>
+        <th colspan="4">Réduire notre consommation électrique</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Box et wifi</td>
+        <td>
+          Éteindre le routeur et les antennes wifi quand elles ne sont pas
+          utilisées
+        </td>
+        <td>Un minuteur peut aider</td>
+      </tr>
+      <tr>
+        <th colspan="4">Ajuster la politique d'achat</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Politique d'achat</td>
+        <td colspan="2">Espacer la période entre deux achats</td>
+      </tr>
+      <tr>
+        <th colspan="4">Éco-concevoir les services numériques</th>
+      </tr>
+      <tr>
+        <th colspan="4">Mesurer l'impact environmental</th>
+      </tr>
+      <tr>
+        <th colspan="4">Sensibilier autour de nous</th>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Atelier</td>
+        <td>S'inscrire à une Fresque</td>
+        <td>
+          Les
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://fresqueduclimat.org/"
+            >Fresques du Climat</a>,
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.fresquedesnouveauxrecits.org/"
+            >des Nouveaux Récits</a>
+          et
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.fresquedunumerique.org/"
+            >du Numérique</a>
+          sont organisées à la
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://bibloux.gembloux.be/evenements/evenements#b_start=0"
+            >bibliothèque de Gembloux</a>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="4">Allonger la durée de garantie légale</th>
+      </tr>
+      <tr>
+        <th colspan="4">Améliorer la conception du matériel</th>
+      </tr>
+      <tr>
+        <th colspan="4">Sortir de l'obsolescence logicielle</th>
+      </tr>
+      <tr>
+        <th colspan="4">Questionner les nouveaux usages</th>
+      </tr>
+      <tr>
+        <th colspan="4">Mutualiser</th>
+      </tr>
+      <tr>
+        <th colspan="4">Contribuer aux choix collectifs</th>
+      </tr>
+    </table>
+
+    <p>
+      Voir aussi la <strong>liste complète</strong> de la
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://drive.google.com/file/d/1E2S_HspnPAcRDb2Z3qF8mUB5rXXJvKRE/view?usp=sharing"
+        >Fresque du Numérique</a
+      >
+    </p>
+
+    <script>
+
+      function toggleTable(groupName) {
+          var x = document.getElementsByClassName(groupName);
+          for (var i = 0; i < x.length; i++) {
+              if (x[i].style.display === "none") {
+                  x[i].style.display = "table-row";
+              } else {
+                  x[i].style.display = "none";
+              }
+          }
+      }
+
+      // Hide all sub-tables initially
+      //toggleTable('groupRaisonnerUsages');
+    </script>
+  </body>
+</html>

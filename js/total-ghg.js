@@ -231,118 +231,124 @@ var points =[
 	{ 'id': 'Europe_27', 'name': 'European Union', 'namefr': 'Union Européenne', 'parent': 'Europe', 'value': 290125360364, 'percentage': 17.1 }
 ];
 
-var title = 'Who emited the most CO₂ so far?';
-var subtitle = 'Global carbon dioxide (CO₂) emissions from 1751 until 2020 were 1 696,5 billion tonnes';
-var pointFormat = '<b>{point.name}</b><br>' +
-			'Emissions: {point.value} tonnes CO₂<br>' +
-			'{point.percentage}% global emissions'
+if (!isMobileDevice) {
+	var title = 'Who emited the most CO₂ so far?';
+	var subtitle = 'Global carbon dioxide (CO₂) emissions from 1751 until 2020 were 1 696,5 billion tonnes';
+	var pointFormat = '<b>{point.name}</b><br>' +
+				'Emissions: {point.value} tonnes CO₂<br>' +
+				'{point.percentage}% global emissions'
 
-if (language == 'fr') {
-	points.forEach(x => x.name = x.namefr);
-	title = 'Qui a émis le plus de CO₂ jusqu\'à aujourd\'hui';
-	subtitle = 'Les émissions globales de dioxyde de carbone (CO₂) de 1751 jusqu\'en 2020 on été de 1 696,5 milliard de tonnes';
-	pointFormat = '<b>{point.name}</b><br>' +
-				'Émissions: {point.value} tonnes CO₂<br>' +
-				'{point.percentage}% des émissions globales';
-}
-
-Highcharts.chart('container-total-ghg', {  
-	chart: {
-	    height: '75%' // 16:9 ratio
-    },
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 550
-            },
-            chartOptions: {
-                chart: {
-                    height: '95%'
-                },
-                title: {
-                    style: {
-                        fontSize: '12px'
-                    }
-                },
-                subtitle: {
-                    style: {
-                        fontSize: '9px',
-                        lineHeight: '8px'
-                    }
-                },
-                xAxis: {
-                    labels: {
-                        style: {
-                            fontSize: '9px'
-                        }
-                    }
-                }
-            }
-        }]
-    },
-
-	series: [{
-		name: 'Regions',
-		type: 'treemap',
-		layoutAlgorithm: 'squarified',
-		allowDrillToNode: true,
-		animationLimit: 1000,
-		dataLabels: {
-			enabled: false
-		},
-		tooltip: {
-			useHTML: true,
-			pointFormat: pointFormat,
-			followPointer: true
-		},
-		levels: [{
-			level: 1,
-			dataLabels: {
-				enabled: true
-			},
-			borderWidth: 3,
-			levelIsConstant: false
-		}, {
-			level: 1,
-			dataLabels: {
-				formatter: function () {
-					return  '<em>' + this.point.name + '</em><br>'
-					  + Math.round(this.point.value/100000000)/10 + ' Gt CO₂<br>' 
-					  + this.point.percentage + '%';
-				  },
-				style: {
-					fontSize: '1.3rem'
-				}
-			}
-		}, {
-			level: 2,
-			dataLabels: {
-				enabled: true
-			},
-			levelIsConstant: false
-		}, {
-			level: 2,
-			dataLabels: {
-				formatter: function () {
-					return this.point.value > 500000 ? '<em>' + this.point.name + ':</em><br>' +
-					  Math.round(this.point.value/100000000)/10 + ' Gt CO₂<br>' + this.point.percentage + '%' : '<em>' + this.point.name + ':</em>';
-				  },
-				//format: '{point.name}\r\n{point.value} tonnes CO2',
-				style: {
-					fontSize: '0.5rem'
-				}
-			}
-		}],
-		data: points
-	}],
-	subtitle: {
-		text: subtitle
-	},
-	title: {
-		text: title,
-        style: {
-            fontSize: '2em'
-        }
+	if (language == 'fr') {
+		points.forEach(x => x.name = x.namefr);
+		title = 'Qui a émis le plus de CO₂ jusqu\'à aujourd\'hui';
+		subtitle = 'Les émissions globales de dioxyde de carbone (CO₂) de 1751 jusqu\'en 2020 on été de 1 696,5 milliard de tonnes';
+		pointFormat = '<b>{point.name}</b><br>' +
+					'Émissions: {point.value} tonnes CO₂<br>' +
+					'{point.percentage}% des émissions globales';
 	}
-});
+
+	Highcharts.chart('container-total-ghg', {  
+		chart: {
+			height: '75%' // 16:9 ratio
+		},
+
+		responsive: {
+			rules: [{
+				condition: {
+					maxWidth: 550
+				},
+				chartOptions: {
+					chart: {
+						height: '95%'
+					},
+					title: {
+						style: {
+							fontSize: '12px'
+						}
+					},
+					subtitle: {
+						style: {
+							fontSize: '9px',
+							lineHeight: '8px'
+						}
+					},
+					xAxis: {
+						labels: {
+							style: {
+								fontSize: '9px'
+							}
+						}
+					}
+				}
+			}]
+		},
+
+		series: [{
+			name: 'Regions',
+			type: 'treemap',
+			layoutAlgorithm: 'squarified',
+			allowDrillToNode: true,
+			animationLimit: 1000,
+			dataLabels: {
+				enabled: false
+			},
+			tooltip: {
+				useHTML: true,
+				pointFormat: pointFormat,
+				followPointer: true
+			},
+			levels: [{
+				level: 1,
+				dataLabels: {
+					enabled: true
+				},
+				borderWidth: 3,
+				levelIsConstant: false
+			}, {
+				level: 1,
+				dataLabels: {
+					formatter: function () {
+						return  '<em>' + this.point.name + '</em><br>'
+						+ Math.round(this.point.value/100000000)/10 + ' Gt CO₂<br>' 
+						+ this.point.percentage + '%';
+					},
+					style: {
+						fontSize: '1.3rem'
+					}
+				}
+			}, {
+				level: 2,
+				dataLabels: {
+					enabled: true
+				},
+				levelIsConstant: false
+			}, {
+				level: 2,
+				dataLabels: {
+					formatter: function () {
+						return this.point.value > 500000 ? '<em>' + this.point.name + ':</em><br>' +
+						Math.round(this.point.value/100000000)/10 + ' Gt CO₂<br>' + this.point.percentage + '%' : '<em>' + this.point.name + ':</em>';
+					},
+					//format: '{point.name}\r\n{point.value} tonnes CO2',
+					style: {
+						fontSize: '0.5rem'
+					}
+				}
+			}],
+			data: points
+		}],
+		subtitle: {
+			text: subtitle
+		},
+		title: {
+			text: title,
+			style: {
+				fontSize: '2em'
+			}
+		}
+	});
+} else if (language == "en") {
+	$('#container-total-ghg').replaceWith('<img src="img/en/biggest-co2-emitors.svg">');
+} else {
+	$('#container-total-ghg').replaceWith('<img src="img/fr/biggest-co2-emitors.svg">');
+}

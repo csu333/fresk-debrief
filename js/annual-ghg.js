@@ -228,101 +228,102 @@ var points =[
 	{ 'id': 'Europe_27', 'name': 'European Union', 'namefr': 'Union Européenne', 'parent': 'Europe', 'value': 2598575259, 'percentage': 7.47 }
 ];
 
+if (!isMobileDevice) {
+	var title = 'Who emits the most CO₂?';
+	var subtitle = 'Global carbon dioxide (CO₂) emissions were 34.8 billion tonnes in 2020';
+	var pointFormat = '<b>{point.name}</b><br>' +
+				'Emissions: {point.value} tonnes CO₂<br>' +
+				'{point.percentage}% global emissions'
 
-var title = 'Who emits the most CO₂?';
-var subtitle = 'Global carbon dioxide (CO₂) emissions were 34.8 billion tonnes in 2020';
-var pointFormat = '<b>{point.name}</b><br>' +
-			'Emissions: {point.value} tonnes CO₂<br>' +
-			'{point.percentage}% global emissions'
-
-if (language == 'fr') {
-	points.forEach(x => x.name = x.namefr);
-	title = 'Qui émet le plus de CO₂ ?';
-	subtitle = 'Les émissions globales de dioxyde de carbone (CO₂) en 2020 on été de 34,8 milliard de tonnes';
-	pointFormat = '<b>{point.name}</b><br>' +
-				'Émissions: {point.value} tonnes CO₂<br>' +
-				'{point.percentage}% des émissions globales';
-}
-
-Highcharts.chart('container-annual-ghg', {  
-	chart: {
-		height: '75%', // 16:9 ratio
-	},
-
-    /*responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 550
-            },
-            chartOptions: {
-                chart: {
-                    height: '95%'
-                }
-            }
-        }]
-    },*/
-
-	series: [{
-		name: 'Regions',
-		type: 'treemap',
-		layoutAlgorithm: 'squarified',
-		allowDrillToNode: true,
-		animationLimit: 1000,
-		dataLabels: {
-			enabled: false
-		},
-		tooltip: {
-			useHTML: true,
-			pointFormat: pointFormat,
-			followPointer: true
-		},
-		levels: [{
-			level: 1,
-			dataLabels: {
-				enabled: true
-			},
-			borderWidth: 3,
-			levelIsConstant: false
-		}, {
-			level: 1,
-			dataLabels: {
-				formatter: function () {
-					return  '<em>' + this.point.name + '</em><br>'
-					  + Math.round(this.point.value/100000000)/10 + ' Gt CO₂<br>' 
-					  + this.point.percentage + '%';
-				  },
-				style: {
-					fontSize: '1.3rem'
-				}
-			}
-		}, {
-			level: 2,
-			dataLabels: {
-				enabled: true
-			},
-			levelIsConstant: false
-		}, {
-			level: 2,
-			dataLabels: {
-				formatter: function () {
-					return this.point.value > 5000000 ? '<em>' + this.point.name + ':</em><br>' +
-					  Math.round(this.point.value/100000)/10 + ' Mt CO₂<br>' + this.point.percentage + '%' : '<em>' + this.point.name + ':</em>';
-				  },
-				//format: '{point.name}\r\n{point.value} tonnes CO2',
-				style: {
-					fontSize: '0.5rem'
-				}
-			}
-		}],
-		data: points
-	}],
-	subtitle: {
-		text: subtitle
-	},
-	title: {
-		text: title,
-        style: {
-            fontSize: '2em'
-        }
+	if (language == 'fr') {
+		points.forEach(x => x.name = x.namefr);
+		title = 'Qui émet le plus de CO₂ ?';
+		subtitle = 'Les émissions globales de dioxyde de carbone (CO₂) en 2020 on été de 34,8 milliard de tonnes';
+		pointFormat = '<b>{point.name}</b><br>' +
+					'Émissions: {point.value} tonnes CO₂<br>' +
+					'{point.percentage}% des émissions globales';
 	}
-});
+
+	Highcharts.chart('container-annual-ghg', {  
+		chart: {
+			height: '75%', // 16:9 ratio
+		},
+
+		/*responsive: {
+			rules: [{
+				condition: {
+					maxWidth: 550
+				},
+				chartOptions: {
+					chart: {
+						height: '95%'
+					}
+				}
+			}]
+		},*/
+
+		series: [{
+			name: 'Regions',
+			type: 'treemap',
+			layoutAlgorithm: 'squarified',
+			allowDrillToNode: true,
+			animationLimit: 1000,
+			dataLabels: {
+				enabled: false
+			},
+			tooltip: {
+				useHTML: true,
+				pointFormat: pointFormat,
+				followPointer: true
+			},
+			levels: [{
+				level: 1,
+				dataLabels: {
+					enabled: true
+				},
+				borderWidth: 3,
+				levelIsConstant: false
+			}, {
+				level: 1,
+				dataLabels: {
+					formatter: function () {
+						return  '<em>' + this.point.name + '</em><br>'
+						+ Math.round(this.point.value/100000000)/10 + ' Gt CO₂<br>' 
+						+ this.point.percentage + '%';
+					},
+					style: {
+						fontSize: '1.3rem'
+					}
+				}
+			}, {
+				level: 2,
+				dataLabels: {
+					enabled: true
+				},
+				levelIsConstant: false
+			}, {
+				level: 2,
+				dataLabels: {
+					formatter: function () {
+						return this.point.value > 5000000 ? '<em>' + this.point.name + ':</em><br>' +
+						Math.round(this.point.value/100000)/10 + ' Mt CO₂<br>' + this.point.percentage + '%' : '<em>' + this.point.name + ':</em>';
+					},
+					//format: '{point.name}\r\n{point.value} tonnes CO2',
+					style: {
+						fontSize: '0.5rem'
+					}
+				}
+			}],
+			data: points
+		}],
+		subtitle: {
+			text: subtitle
+		},
+		title: {
+			text: title,
+			style: {
+				fontSize: '2em'
+			}
+		}
+	});
+}

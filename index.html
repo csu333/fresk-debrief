@@ -1,59 +1,223 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html>
-<head>
-  <title>Accueil | Fresques</title>
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<!DOCTYPE html>
+<html lang="fr">
 
-	<style>
-		body {
-			background-image: url('flowers-276014_1920.jpg');
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;
-			height: 100vh;
-			margin: 0;
-			padding: 0;
-		}
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 50%;
-		}
-		a {
-			color: black;
-			font-size: 32px;
-			margin-bottom: 20px;
-			text-decoration: none;
-		}
-		button {
-			background-color: white;
-			border-radius: 10px;
-			border-style: none;
-			color: black;
-			font-size: 24px;
-			margin-top: 20px;
-			padding: 10px 20px;
-		}
-    h1 {
-      margin: 3em;
-    }
-    span {
-      margin: 3em;
-    }
-	</style>
+<head>
+  <title>Accueil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="css/inuit.css">
+  <link rel="stylesheet" href="css/fluid-grid16-1100px.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/eve-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="favicon-48.png">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="shortcut icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="apple-touch-icon-precomposed" href="favicon-48.png">
+  <script src="js/respond-min.js"></script>
+  <script src="js/jquery164min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/toggle-menu.js"></script>
+  <link rel="stylesheet" href="css/flexslider.css">
+  <script>
+    $(window).load(function () {
+      $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav: false,
+        keyboardNav: true,
+        mousewheel: true,
+        slideshowSpeed: 10000
+      });
+      fetch('./menu.html')
+        .then(response => response.text())
+        .then(body => {
+          $('nav').html(body);
+          $('nav').removeAttr("style");
+          let activeFound = false;
+          $('#nav').children().each((i, element) => {
+            if ($(element).children('a').length > 0) {
+              let a = $(element).children().first();
+              if (window.location.href.includes(a.attr('href'))) {
+                a.addClass('active');
+                activeFound = true;
+              } else {
+                a.removeClass('active');
+              }
+            }
+          });
+          if (!activeFound) {
+            $('#nav').children().first().children('a').first().addClass('active');
+          }
+        })
+        .catch(error => console.error(error));
+
+    });
+  </script>
+  <!--[if lte IE 7]>
+<style>
+hr { display:block; height:1px; border:0; border-top:1px solid #fff; margin:1em 0; padding:0; }
+.grid-4{ width:22% }
+</style>
+<![endif]-->
 </head>
+<!--===============================================================  Logo, social and menu =====================================================================================-->
+
 <body>
-  <h1>Bienvenue</h1>
-  <span>Sur ce site, vous trouverez les informations relatives aux ateliers que j’anime.</span>
-	<div class="container">
-    <button><a href="climat.html">Fresque du Climat</a></button><br>
-    <button><a href="numerique.html">Fresque du Numérique</a></button>
-	</div>
+  <nav style="height: 140px"></nav>
+
+  <!--===============================================================  End of Logo, social and menu ===============================================================================-->
+  <!--end of wrapper div-->
+  <div class="clear"></div>
+  <div class="wrapper">
+    <div class="grids top">
+      <div class="grid-6 grid intro">
+        <h2>Ateliers de sensibilisation</h2>
+        <p>Je propose différents types d'ateliers participatifs qui permettent de comprendre les enjeux et de se mettre
+          en mouvement.</p>
+      </div>
+      <!--end of slogan div-->
+      <div class="grid-10 grid">
+        <div class="flexslider">
+          <noscript>
+            You have Javascript set to disabled. This slideshow runs with Javascript and will only be shown if you turn
+            it on.<br>
+            Sie haben Javascript deaktiviert. Diese Slideshow wird nur vollständig angezeigt, wenn Sie Javascript
+            aktivieren.
+          </noscript>
+          <ul class="slides">
+            <li> <a href="#" style="display: flex; justify-content: center;"><img style="height:400px;"
+                  src="img/logo-climat.svg" alt="Logo La Fresque du Climat">
+                <p class="flex-caption">La Fresque du Climat</p>
+              </a> </li>
+            <li> <a href="#" style="display: flex; justify-content: center;"><img style="height:400px;"
+                  src="img/logo-biodiversite.svg" alt="Logo La Fresque de la Biodiversité">
+                <p class="flex-caption">La Fresque de la Biodiversité</p>
+              </a> </li>
+            <li> <a href="#" style="display: flex; justify-content: center;"><img style="height:400px;"
+                  src="img/logo-nouveaux-recits.svg" alt="Logo La Fnesque des Nouveaux Récits">
+                <p class="flex-caption">La Fresque des Nouveaux Récits</p>
+              </a> </li>
+            <li> <a href="#" style="display: flex; justify-content: center;"><img style="height:400px;"
+                  src="img/logo-2tonnes.svg" alt="Logo 2 tonnes">
+                <p class="flex-caption">2 tonnes</p>
+              </a> </li>
+          </ul>
+        </div>
+        <!--end of div flexslider-->
+      </div>
+      <!--end of div grid-10-->
+    </div>
+    <!--end of div grids-->
+  </div>
+  <!--end of div wrapper-->
+  <!--========================================================================== Content Part 1 =====================================================================================-->
+  <div class="wrapper">
+    <div class="grids">
+      <!-- div class="grid">
+      <h2>Enjoy it, it´s free!</h2>
+      <p> ResponseEve is responsive, fresh, modern, bold and completly free. You may use it for both private and commercial projects. If you like it and if you want to show some respect for my work, consider not to remove the link in the footer - though it is not required. Anyway, do me a favour and spread the word!</p>
+      <p>Please understand that - due to the fact, that this is free - no service is provided. But I am available for freelance jobs! ;-)</p>
+    </div>
+    < !--end of grid-10-->
+      <!-- div class="grid-6 grid grey">
+      <h2>This is a quote</h2>
+      <p class="quote">"You can use it with or without green or grey box. The classes are: quote, green, grey. The boxes are meant to attract attention - don´t use them extensively." <span>SiGa</span></p>
+    </div -->
+    </div>
+    <!--end of grids-->
+  </div>
+  <!--end of wrapper-->
+  <hr />
+  <!--========================================================================== Content Part 3 =====================================================================================-->
+  <div class="wrapper">
+    <div class="grids">
+      <div class="grid-4 grid"> <img src="img/logo-climat.svg" alt="Logo - La Fresque du Climat"> </div>
+      <div class="grid-4 grid">
+        <h5>La Fresque du Climat</h5>
+        <p>Comprendre les <strong>enjeux climatiques</strong><br>
+          <a class="button" href="info-climat.html">Plus d'information</a>
+        </p>
+      </div>
+      <div class="grid-4 grid"> <img src="img/logo-biodiversite.svg" alt="Logo La Fresque de la Biodiversité"> </div>
+      <div class="grid-4 grid">
+        <h5>La Fresque de la Biodiversité</h5>
+        <p>Parce qu'il n'y a pas que le climat dans la <strong>vie</strong>.<br>
+          <a class="button" href="info-biodiversite.html">Plus d'information</a>
+        </p>
+      </div>
+    </div>
+    <!--end of grids-->
+  </div>
+  <!--end of wrapper-->
+  <!--===================================================  second row of Content Part 3 ================================================-->
+  <div class="wrapper">
+    <div class="grids">
+      <div class="grid-4 grid"> <img src="img/logo-nouveaux-recits.svg" alt="Logo La Fresque des Nouveaux Récits">
+      </div>
+      <div class="grid-4 grid">
+        <h5>La Fresque des Nouveaux Récits</h5>
+        <p>Pour créer une société différente, il faut déjà l'<strong>imaginer</strong>.<br>
+          <a class="button" href="info-nouveaux-recits.html">Plus d'information</a>
+        </p>
+      </div>
+      <div class="grid-4 grid"> <img src="img/logo-2tonnes.svg" alt="Logo - 2 tonnes"> </div>
+      <div class="grid-4 grid">
+        <h5>2 tonnes</h5>
+        <p>Jouer pour <strong>diminuer notre empreinte carbone</strong><br>
+          <a class="button" href="info-2tonnes.html">Plus d'information</a>
+        </p>
+      </div>
+    </div>
+    <!--end of grids-->
+    <!-- div class=" grids flexslider intro ticker top">
+    <noscript>
+    You have Javascript set to disabled. This ticker runs with Javascript and will only be shown if you turn it on.<br>
+    Sie haben Javascript deaktiviert. Dieser Ticker wird nur vollständig angezeigt, wenn Sie Javascript aktivieren.
+    </noscript>
+    <ul class="slides">
+      <li>
+        <p class="text-center"> Hey, let your creativity flow and create something great! </p>
+      </li>
+      <li>
+        <p class="text-center"> You can use this as a ticker! </p>
+      </li>
+      <li>
+        <p class="text-center"> You can use this somewhere else on this page, too, of course. </p>
+      </li>
+      <li>
+        <p class="text-center"> Write anything you want here! </p>
+      </li>
+      <li>
+        <p class="text-center"> You can display some news, if you want. </p>
+      </li>
+      <li>
+        <p class="text-center"> Or maybe some important infos. </p>
+      </li>
+    </ul>
+  </div>
+  < !--end of div flexslider-->
+  </div>
+  <!--end of wrapper-->
+  <!--========================================================================== Footer =====================================================================================-->
+  <div class="wrapper">
+    <div id="footer">
+      <div class="grids">
+        <div class="grid-5 grid text-center">
+          <p>&copy; Eve 2012 by <a target="_blank" href="http://sg-layout.com">SiGa</a></p>
+        </div>
+        <div class="grid-6 grid text-center">
+          <p>Free responsive template v 1.0</p>
+        </div>
+        <div class="grid-5 grid text-center">
+          <p>Contactez moi <a href="contact.html">ici</a></p>
+        </div>
+      </div>
+      <!--end of grids-->
+    </div>
+    <!--end of footer-->
+  </div>
+  <!--end of wrapper-->
 </body>
+
 </html>

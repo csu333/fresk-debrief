@@ -1,0 +1,116 @@
+header {
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+#nav.topnav {
+    overflow: hidden;
+}
+
+#nav.topnav li {
+    float: left;
+    display: block;
+    /*color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;*/
+}
+
+/*.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}*/
+
+/*.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}*/
+
+#menu-icon {
+    display: none !important;
+    padding: 0.6em 1.2em;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    border-right: 1px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    color: #666;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #fff;
+    font-size: 1.1em;
+    margin: 0 0 0.6em 0;
+}
+
+@media screen and (max-width: 1024px) {
+    #nav.topnav li:not(:first-child) {
+        display: none;
+    }
+
+    #menu-icon {
+        float: right;
+        margin: 15px 0 17px 0;
+        display: block !important;
+    }
+
+    #nav.main {
+        display: none;
+    }
+
+    #nav {
+        padding: 0.6em 1.2em;
+        background-color: #EFEFEF;
+        border-radius: 10px;
+        border-right: 1px solid #bbb;
+        border-bottom: 2px solid #bbb;
+        color: #666;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 1px #fff;
+        font-size: 1.1em;
+        margin: 0 0 0.6em 0;
+    }
+
+    #nav.topnav.responsive a {
+        border-right: 0px;
+        border-bottom: 0px;
+        display: block;
+    }
+
+    #nav.topnav.responsive {
+        position: absolute;
+        display: block;
+        top: 115px;
+        right: 16px;
+        z-index: 3;
+    }
+
+    #nav.topnav.responsive .icon {
+        /*position: absolute;*/
+        right: 0;
+        top: 0;
+    }
+
+    #nav.topnav.responsive li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    /*body.menu-open {
+        padding-top: 50px;
+    }*/
+}
+
+@media (min-width: 721px) and (max-width: 960px) {
+    #nav.topnav.responsive {
+        top: 105px;
+    }
+}
+
+@media (max-width: 720px) {
+    #nav.topnav.responsive {
+        right: 10px;
+    }
+}

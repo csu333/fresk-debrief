@@ -1,0 +1,141 @@
+doctype html
+html(lang="fr")
+  head
+    title 2 tonnes
+    include header.pug
+    //
+      [if lte IE 7]>
+      <style>
+      hr { display:block; height:1px; border:0; border-top:1px solid #fff; margin:1em 0; padding:0; }
+      .grid-4{ width:22% }
+      </style>
+      <![endif]
+  // ===============================================================  Logo, social and menu =====================================================================================
+  body(onload="selectActiveMenuItem();")
+    include menu.pug
+    // ===============================================================  End of Logo, social and menu ===============================================================================
+    // end of wrapper div
+    .clear
+    .wrapper
+      .grids
+        // ===============================================================  Style playground =====================================================================================
+        .grid-11.grid
+          h1 2 tonnes
+          .wrapper
+            .wrapper
+              .grids
+                .grid-4.grid
+                  img(
+                    alt="Logo - 2 tonnes" 
+                    src="img/logo-2tonnes.svg"
+                    )
+                .grid-9.grid
+                  p
+                    | 2tonnes a une ambition : donner aux 
+                    strong individus 
+                    | et aux 
+                    strong organisations 
+                    | les moyens de comprendre comment 
+                    strong agir 
+                    | et contribuer à une transition réaliste et 
+                    |   inspirante qui assurera un 
+                    strong monde juste et sûr pour l’humanité !
+            h4 Pourquoi 2tonnes ?
+            p
+              | 2 tonnes équivalent CO2 (
+              a(href="https://www.2tonnes.org/note-technique-objectif-2050") pourquoi ce calcul ? 📊
+              | ), c’est l’empreinte carbone moyenne par habitant que nous devrions atteindre en 2050, notamment
+              |   pour respecter l’engagement de l’Accord de Paris.
+            p
+              | Aujourd’hui, nous sommes en moyenne à 10 tonnes en France et 15 tonnes en Belgique. Le défi à relever est
+              |   donc considérable ! Des changements et une véritable transition sont nécessaires.
+            p
+              | Mais il n’y a pas que le carbone dans la vie ! Et si cet ambitieux défi était l’opportunité de régler
+              |   d’autres problématiques écologiques et sociales, de
+              strong
+                | créer une société plus épanouie et plus juste 
+              | (
+              a(href="https://www.2tonnes.org/questcequeledonut") vous avez dit "Donut" ? 🍩
+              |)
+              | ?
+            p
+              | Facile à dire, mais 
+              strong comment faire
+              | ? Et 
+              strong quel rôle 
+              | pouvons-nous jouer
+              |   exactement ?
+            p
+              strong 2tonnes, c’est l’atelier qui permet à chacun et chacune d’y apporter sa propre réponse !
+            hr
+            .wrapper
+              h3 Déroulement de l’atelier
+              .grids
+                .grid-5.grid
+                  h2.text-center 1.
+                  h5 Vos données
+                  p Calculez votre empreinte carbone pour jouer avec vos données personnalisées !
+                .grid-5.grid
+                  h2.text-center 2.
+                  h5 Un quiz
+                  p
+                    | Tout le monde se met au même niveau de connaissances sur le climat, les enjeux sociaux et la
+                    |   comptabilité carbone.
+                .grid-6.grid
+                  h2.text-center 3.
+                  h5 Le jeu
+                  p
+                    | En 8 tours d'actions invidivuelles et collectives, simulez la réduction des émissions jusqu'en 2050,
+                    |   et observez les impacts sociaux et environnementaux de vos décisions !
+                .grid-6.grid
+                  h2.text-center 4.
+                  h5 Un débrief
+                  p
+                    | Une séance de revue des résultats, des enseignements, pour pouvoir se projeter sur le quotidien et le
+                    |   monde réel !
+                .grid-6.grid
+                  h2.text-center 5.
+                  h5 Et… Action !
+                  p
+                    | Grâce aux enseignements de l’atelier et à votre tableau de bord personnalisé, repartez avec tous les
+                    |   moyens d’agir !
+        // end of grid-10
+        // ===============================================================  Green box (sidebar) =====================================================================================
+        .grid-5.grid.green
+          h2 En pratique
+          h5 3,5 heures
+          p pour choisir sa méthode de décarbonation
+          h5 Une simulation
+          p à animer en présentiel ou en ligne
+          h5 Un·e animateur·ice
+          p pour 5 à 14 participant·es
+          h5 Accessible à tout public
+          p à partir de 12 ans
+          h5 Plus d’informations
+          p
+            | sur le
+            a(href="https://www.2tonnes.org/") le site de l’association
+        .grid-5.grid.green
+          h2 Inscriptions
+          p
+            | Pour pouvoir assurer de bonnes conditions pour l’atelier, une inscription préalable est nécessaire.
+          p
+            a(href="https://www.eventbrite.com/e/billets-2tonnes-936044433097")
+              | Tous
+              |   les ateliers grand public belges en présentiel
+          p
+            a(
+              href="https://www.eventbrite.com/cc/ateliers-grand-public-en-ligne-online-workshops-2133139"
+              )
+              | Tous
+              |   les ateliers grand public en ligne
+      // end of grids
+      //
+        hr>
+         <div class="wrapper">
+         Voici <a href="https://www.fresquedesnouveauxrecits.org/sommaire-des-recits/">Tous les récits publiés</a>
+         </div>
+         <hr>
+         </div>
+         <!--end of wrapper
+      include footer.pug

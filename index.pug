@@ -1,0 +1,159 @@
+doctype html
+html(lang="fr")
+  head
+    title Accueil
+    include header.pug
+    script(src="js/jquery.flexslider-min.js")
+    link(
+      href="css/flexslider.css" 
+      rel="stylesheet"
+    )
+    script.
+      $(window).load(function () {
+        $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav: false,
+        keyboardNav: true,
+        mousewheel: true,
+        slideshowSpeed: 10000
+        });
+        });
+    //
+      [if lte IE 7]>
+      <style>
+      hr { display:block; height:1px; border:0; border-top:1px solid #fff; margin:1em 0; padding:0; }
+      .grid-4{ width:22% }
+      </style>
+      <![endif]
+  // ===============================================================  Logo, social and menu =====================================================================================
+  body(onload="selectActiveMenuItem();")
+    include menu.pug
+    // ===============================================================  End of Logo, social and menu ===============================================================================
+    // end of wrapper div
+    .clear
+    .wrapper
+      .grids.top
+        .grid-6.grid.intro
+          h2 Ateliers de sensibilisation
+          p
+            | Je propose différents types d'ateliers participatifs qui permettent de comprendre les enjeux et de se mettre
+            |   en mouvement.
+        // end of slogan div
+        .grid-10.grid
+          .flexslider
+            noscript
+              | You have Javascript set to disabled. This slideshow runs with Javascript and will only be shown if you turn
+              |   it on.<br>
+            ul.slides
+              li
+                a(
+                  style="display: flex; justify-content: center;" 
+                  href="#"
+                  )
+                  img(
+                    alt="Logo La Fresque du Climat" 
+                    src="img/logo-climat.svg" 
+                    style="height:400px;"
+                    )
+                  p.flex-caption La Fresque du Climat
+              li
+                a(
+                  style="display: flex; justify-content: center;" 
+                  href="#"
+                  )
+                  img(
+                    alt="Logo La Fresque de la Biodiversité" 
+                    src="img/logo-biodiversite.svg" 
+                    style="height:400px;"
+                    )
+                  p.flex-caption La Fresque de la Biodiversité
+              li
+                a(
+                  style="display: flex; justify-content: center;" 
+                  href="#"
+                  )
+                  img(
+                    alt="Logo La Fresque des Nouveaux Récits" 
+                    src="img/logo-nouveaux-recits.svg" 
+                    style="height:400px;"
+                    )
+                  p.flex-caption La Fresque des Nouveaux Récits
+              li
+                a(
+                  style="display: flex; justify-content: center;" 
+                  href="#"
+                  )
+                  img(
+                    alt="Logo 2 tonnes" 
+                    src="img/logo-2tonnes.svg" 
+                    style="height:400px;"
+                    )
+                  p.flex-caption 2 tonnes
+          // end of div flexslider
+        // end of div grid-10
+      // end of div grids
+    // end of div wrapper
+    
+    hr
+    // ========================================================================== Content Part 3 =====================================================================================
+    .wrapper
+      .grids
+        .grid-4.grid
+          img(
+            alt="Logo - La Fresque du Climat" 
+            src="img/logo-climat.svg"
+            )
+        .grid-4.grid
+          h5 La Fresque du Climat
+          p
+            | Comprendre les
+            strong enjeux climatiques
+            br
+            a.button(href="info-climat.html") Plus d'information
+        .grid-4.grid
+          img(
+            alt="Logo La Fresque de la Biodiversité" 
+            src="img/logo-biodiversite.svg"
+            )
+        .grid-4.grid
+          h5 La Fresque de la Biodiversité
+          p
+            | Parce qu'il n'y a pas que le climat dans la
+            strong vie
+            | .
+            br
+            a.button(href="info-biodiversite.html") Plus d'information
+      // end of grids
+    // end of wrapper
+    // ===================================================  second row of Content Part 3 ================================================
+    .wrapper
+      .grids
+        .grid-4.grid
+          img(
+            alt="Logo La Fresque des Nouveaux Récits" 
+            src="img/logo-nouveaux-recits.svg"
+            )
+        .grid-4.grid
+          h5 La Fresque des Nouveaux Récits
+          p
+            | Pour créer une société différente, il faut déjà l'
+            strong imaginer
+            | .
+            br
+            a.button(href="info-nouveaux-recits.html") Plus d'information
+        .grid-4.grid
+          img(
+            alt="Logo - 2 tonnes" 
+            src="img/logo-2tonnes.svg"
+            )
+        .grid-4.grid
+          h5 2 tonnes
+          p
+            | Jouer pour
+            strong diminuer notre empreinte carbone
+            br
+            a.button(href="info-2tonnes.html") Plus d'information
+      // end of gridsŝ
+    // end of wrapper
+    include footer.pug
+    // end of wrapper

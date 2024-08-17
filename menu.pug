@@ -1,0 +1,46 @@
+-
+  menu_item = {
+  "index.html": "Home",
+  "info-climat.html": "Climat",
+  "info-biodiversite.html": "Biodiversité",
+  "info-nouveaux-recits.html": "Nouveaux Récits",
+  "info-2tonnes.html": "2 tonnes",
+  "autres.html": "Autres",
+  "contact.html": "Contact"
+  }
+
+.wrapper
+  nav
+  a#logo(href="index.html")
+      img(
+      alt="Logo" 
+      src="img/logo.svg"
+      )
+      h1.accessibility Bienvenue sur mon site
+  .social
+      a(href="https://www.facebook.com/profile.php?id=100083216721955")
+      img(
+          alt="Facebook" 
+          height="20" 
+          width="20" 
+          src="img/facebook.svg"
+          )
+      
+      a(href="https://www.linkedin.com/in/jpcadiat/")
+      img(
+          alt="Linkedin" 
+          height="20" 
+          width="20" 
+          src="img/linkedin.svg"
+          )
+  a#menu-icon(
+      onclick="toggleMenu()" 
+      href="javascript:void(0);"
+      )
+      i.fa.fa-bars
+
+  ul#nav.main.topnav
+    each val, key in menu_item 
+      li
+        a(href=key) #{val}
+    

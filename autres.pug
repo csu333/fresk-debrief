@@ -1,0 +1,103 @@
+doctype html
+html(lang="fr")
+  head
+    title Autres
+    include header.pug
+    //
+      [if lte IE 7]>
+      <style>
+      hr { display:block; height:1px; border:0; border-top:1px solid #fff; margin:1em 0; padding:0; }
+      .grid-4{ width:22% }
+      </style>
+      <![endif]
+  // ===============================================================  Logo, social and menu =====================================================================================
+  body(onload="selectActiveMenuItem();")
+    include menu.pug
+    // end of wrapper div
+    .clear
+    // ===============================================================  Left content, address =====================================================================================
+    .wrapper
+      .grids.top
+        .grid
+          | Même si certains de ses défenseurs  
+          a(href="https://www.lapresse.ca/affaires/2024-01-13/philanthropie/le-petit-monde-de-l-altruisme-efficace.php") les ont dévoyées, 
+          | je reste séduit par certaines des idées de 
+          a(href="https://fr.wikipedia.org/wiki/Peter_Singer") Peter Singer. 
+          | J’ai donc décidé de consacrer une partie de mes revenus à certains organismes et créateurs de contenus. 
+          | Vous retrouverez sur cette page une liste non exhaustive.
+        .wrapper
+          .grids
+            h2 Organisme
+            .grid-4.grid
+              svg(
+                height="130px"
+                viewBox="0 0 700 1050" 
+                xmlns="http://www.w3.org/2000/svg"
+                )
+                defs
+                  style
+                    | .jss2 {fill: none;height: 35px;stroke: rgb(12, 134, 155);paint-order: fill;stroke-width: 52;stroke-linecap: round;stroke-linejoin: round;}
+                g.jss2
+                  title Effective Altruism Lightbulb
+                  path(
+                    d="M 299.209 567.046 C 299.209 567.046 208.658 490.017 208.658 410.063 C 208.658 358.904 237.235 325.959 281.748 325.959 C 321.607 325.959 360.912 378.543 360.912 408.707 C 360.912 421.736 355.854 428.342 348.836 428.342 C 341.818 428.342 336.936 420.419 336.936 408.898 C 336.936 378.34 381.84 326.598 422.309 326.598 C 465.764 326.598 490.931 364.731 490.931 401.243 C 490.931 470.953 449.522 539.012 393.485 614.471 C 333.21 695.636 311.182 688.474 276.989 688.474 C 242.796 688.474 220.894 683.307 205.038 670.603 C 172.264 644.343 183.182 607.484 144.088 546.257 C 104.994 485.03 68.425 464.854 62.857 347.013 C 57.032 223.728 154.194 52.093 349.567 52.093 C 572.38 52.093 647.105 259.873 637.479 352.978 C 637.479 352.978 640.445 444.741 569.083 534.657 C 497.721 624.573 513.387 695.609 506.459 732.234 C 493.447 801.021 330.908 814.563 240.51 814.487 C 330.496 814.487 493.729 810.066 494.406 875.024 C 495.08 939.703 349.567 928.024 243.221 927.138 C 348.799 928.407 451.739 923.675 496.056 997.347"
+                    )
+            .grid-4.grid
+              h5 Effective Altruism
+              p
+                a(href="https://www.effectivealtruism.org/") Effective Altruism (EN)
+                |  est une organisation non gouvernementale qui évalue différents projets en fonction de leur impact positif.
+                
+        hr
+        h2 Créateurs de contenu
+        .wrapper
+          .grids(style="display: flex;align-items: center;flex-wrap: wrap;")
+            .grid-4.grid
+              img(
+                alt="Logo - Just Have a Think" 
+                src="img/logo-just-have-a-think.webp"
+                )
+            .grid-4.grid
+              h5 Just Have a Think
+              p 
+                a(href="https://www.youtube.com/justhaveathink") Just Have a Think (EN) 
+                |  est une chaine Youtube qui propose une vidéo hebdomadaire sur un sujet lié au climat. 
+
+            .grid-4.grid
+              img(
+                alt="Logo - Philoxime" 
+                src="img/logo-philoxime.webp"
+                )
+            .grid-4.grid
+              h5 Philoxime
+              p 
+                a(href="https://www.youtube.com/@Philoxime") Philoxime 
+                |  est une chaine Youtube qui explique la philo politique et l’éthique du climat. 
+          .grids(style="display: flex;align-items: center;flex-wrap: wrap;")
+            .grid-4.grid
+              img(
+                style="max-width: 250px"
+                alt="Logo - LIMIT" 
+                src="img/logo-limit.png"
+                )
+            .grid-4.grid
+              h5 LIMIT
+              p 
+                a(href="https://limit.media/") LIMIT 
+                |  est un nouveau média qui a pour vocation d'aborder les thématiques qui englobent les "Limites Planétaires". 
+            .grid-4.grid
+              div
+                img(
+                  style="max-width: 250px"
+                  alt="Logo - Vert" 
+                  src="img/logo-vert.svg"
+                  )
+            .grid-4.grid
+              h5 Vert, Le média qui annonce la couleur
+              p 
+                a(href="https://vert.eco/") Vert 
+                |  est un média qui couvre l’actualité climatique. 
+        // end of grids
+      // end of wrapper
+      // ===============================================================  Footer =====================================================================================
+      include footer.pug

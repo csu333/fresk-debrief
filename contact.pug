@@ -1,0 +1,49 @@
+doctype html
+html(lang="fr")
+  head
+    title Contact
+    include header.pug
+    script(src="js/jquery.formalize.min.js")
+    script.
+      $(window).load(function () {
+        $("#email").html(`<a href="mailto:${atob('Y29udGFjdC1hdGVsaWVyc0BqcC5jYWRpYXQuYmU=')}">${atob('Y29udGFjdC1hdGVsaWVyc0BqcC5jYWRpYXQuYmU=')}</a>`);
+        fetch('./menu.html')
+        .then(response => response.text())
+        .then(body => {
+        $('nav').html(body);
+        $('nav').removeAttr("style");
+        })
+        .catch(error => console.error(error));
+        });
+    //
+      [if lte IE 7]>
+      <style>
+      hr { display:block; height:1px; border:0; border-top:1px solid #fff; margin:1em 0; padding:0; }
+      .grid-4{ width:22% }
+      </style>
+      <![endif]
+  // ===============================================================  Logo, social and menu =====================================================================================
+  body(onload="selectActiveMenuItem();")
+    include menu.pug
+    // end of wrapper div
+    .clear
+    // ===============================================================  Left content, address =====================================================================================
+    .wrapper
+      .grids.top
+        .grid
+          | Si vous souhaitez organiser un atelier dans un cadre privé ou grand public, n’hésitez pas à me contacter.
+        .grid-6.grid
+          h2 Adresse
+          div
+            p.bottom
+              | Jean-Pierre Cadiat
+              br
+              | Gembloux
+              br
+              br
+              span#email
+          // end of grid-10
+        // end of grids
+      // end of wrapper
+      // ===============================================================  Footer =====================================================================================
+      include footer.pug

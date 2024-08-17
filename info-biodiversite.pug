@@ -1,0 +1,103 @@
+doctype html
+html(lang="fr")
+  head
+    title Fresque de la Biodiversité
+    include header.pug
+    //
+      [if lte IE 7]>
+      <style>
+      hr { display:block; height:1px; border:0; border-top:1px solid #fff; margin:1em 0; padding:0; }
+      .grid-4{ width:22% }
+      </style>
+      <![endif]
+  // ===============================================================  Logo, social and menu =====================================================================================
+  body(onload="selectActiveMenuItem();")
+    include menu.pug
+    // ===============================================================  End of Logo, social and menu ===============================================================================
+    // end of wrapper div
+    .clear
+    .wrapper
+      .grids
+        // ===============================================================  Style playground =====================================================================================
+        .grid-11.grid
+          h1 Fresque de la Biodiversité
+          .wrapper
+            .wrapper
+              .grids
+                .grid-4.grid
+                  img(
+                    alt="Logo - La Fresque de la Biodiversité" 
+                    src="img/logo-biodiversite.svg"
+                    )
+                .grid-9.grid
+                  p
+                    | Découvrez au travers d'un atelier 
+                    strong ludique et collaboratif 
+                    | l'aspect systémique de l'érosion de la
+                    |   biodiversité : ce qu’elle est, ce qu’elle permet et ce qui la dégrade.
+            h4 Pourquoi la Fresque de la Biodiversité ?
+            p
+              | Pour faire comprendre les enjeux et pressions autour de la biodiversité se basant sur le rapport de l’IPBES
+              |   au travers d’un atelier ludique, collaboratif, visuel et accessible à tous.
+            p.quote
+              | Le taux actuel d'extinction des espèces dans le monde est supérieur à la moyenne des 10
+              |   derniers millions d'années, et ce taux s'accélère.
+              span IPBES 2019
+          hr
+          .wrapper
+            h3 Déroulement de l’atelier
+            .grids
+              .grid-4.grid
+                h2.text-center 1.
+                h5 « Apéro » avec 3 écosystèmes
+                p Recréer un écosystème et découvrir les impacts d’une perturbation dans celui-ci.
+              .grid-4.grid
+                h2.text-center 2.
+                h5 Les 39 cartes du jeu
+                p
+                  | Distribuées en 5 lots, les participants répartis par équipe de 5-7 doivent retrouver les liens entre
+                  |   les 39 cartes pour comprendre ce qu’est la Biodiversité, ce qu’elle apporte et ce qui la dégrade.
+              .grid-4.grid
+                h2.text-center 3.
+                h5 Faire de votre Fresque une oeuvre d'art
+                p
+                  | Les participants doivent décorer et trouver un titre à leur Fresque afin de restituer leur travail
+                  |   devant les autres équipes.
+              .grid-4.grid
+                h2.text-center 4.
+                h5 Débriefing et pistes d’actions
+                p
+                  | Adapté aux objectifs de la séance, le débrief sur les apprentissages vise à élaborer un plan d’action
+                  |   en réfléchissant de manière collaborative aux solutions pour agir face à l'érosion de la biodiversité.
+        // end of grid-11
+        // ===============================================================  Green box (sidebar) =====================================================================================
+        .grid-5.grid.green
+          h2 En pratique
+          h5 3 heures
+          p pour comprendre les enjeux climatiques
+          h5 Un jeu de 39 cartes
+          p à animer en présentiel ou en ligne
+          h5 Un·e animateur·ice
+          p pour 4 à 14 participant·es
+          h5 Accessible à tout public
+          p avec des versions junior (9-14 ans), simplifiée (14-18 ans) et adultes
+          h5 Plus d’informations
+          p
+            | sur le
+            a(href="https://www.fresquedelabiodiversite.org/") le site de l’association
+        .grid-5.grid.green
+          h2 Inscriptions
+          p
+            | Pour pouvoir assurer de bonnes conditions pour l’atelier, une inscription préalable est nécessaire.
+          p
+            a(href="https://www.billetweb.fr/belgique-belgi")
+              | Tous
+              |   les ateliers grand public belges en présentiel
+          p
+            a(href="https://www.billetweb.fr/fresque-de-la-biodiversite-en-ligne-2022")
+              | Tous
+              |   les ateliers grand public en ligne
+      // end of grids
+      hr
+    // end of wrapper
+    include footer.pug

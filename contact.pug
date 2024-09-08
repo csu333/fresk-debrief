@@ -6,15 +6,9 @@ html(lang="fr")
     script(src="js/jquery.formalize.min.js")
     script.
       $(window).load(function () {
+        // Do not ease the task of robots
         $("#email").html(`<a href="mailto:${atob('Y29udGFjdC1hdGVsaWVyc0BqcC5jYWRpYXQuYmU=')}">${atob('Y29udGFjdC1hdGVsaWVyc0BqcC5jYWRpYXQuYmU=')}</a>`);
-        fetch('./menu.html')
-        .then(response => response.text())
-        .then(body => {
-        $('nav').html(body);
-        $('nav').removeAttr("style");
-        })
-        .catch(error => console.error(error));
-        });
+      }
     //
       [if lte IE 7]>
       <style>

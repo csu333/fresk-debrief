@@ -6,3 +6,4 @@ test.html
 .vscode
 html
 node_modules
+env_file.sh
